@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/luna_test/static/css/main.b0566d94.css",
-    "main.js": "/luna_test/static/js/main.75a163cb.js",
+    "main.css": "/luna_test/static/css/main.83e03dbc.css",
+    "main.js": "/luna_test/static/js/main.d27c18c1.js",
     "static/js/787.79393338.chunk.js": "/luna_test/static/js/787.79393338.chunk.js",
+    "static/media/ripples.png": "/luna_test/static/media/ripples.d207f490d441831e9060.png",
+    "static/media/back-logo.png": "/luna_test/static/media/back-logo.c67006738ed3d3004939.png",
     "index.html": "/luna_test/index.html",
-    "main.b0566d94.css.map": "/luna_test/static/css/main.b0566d94.css.map",
-    "main.75a163cb.js.map": "/luna_test/static/js/main.75a163cb.js.map",
+    "main.83e03dbc.css.map": "/luna_test/static/css/main.83e03dbc.css.map",
+    "main.d27c18c1.js.map": "/luna_test/static/js/main.d27c18c1.js.map",
     "787.79393338.chunk.js.map": "/luna_test/static/js/787.79393338.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0566d94.css",
-    "static/js/main.75a163cb.js"
+    "static/css/main.83e03dbc.css",
+    "static/js/main.d27c18c1.js"
   ]
 }
