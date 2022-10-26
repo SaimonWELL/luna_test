@@ -1,0 +1,60 @@
+.block1 {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  position: relative;
+  margin-bottom: 40px;
+}
+.block1 .group1 {
+  margin-left: 165px;
+  height: 184px;
+}
+.block1 .group1 .item1 a, .block1 .group1 .item1 h1 {
+  font-family: "Mohave", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  color: #FFFFFF;
+}
+.block1 .group1 .item2 p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 45px;
+  color: white;
+}
+.block1 .group2 {
+  width: 400px;
+  height: 200px;
+  margin-left: 122px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.block1 .group2 a {
+  height: 40px;
+}
+.block1 .group2 img {
+  margin-right: 10px;
+  margin-bottom: 25px;
+}
+.block1 .group2 a:last-child img {
+  vertical-align: bottom;
+}
+.block1 .group3 {
+  display: flex;
+  justify-content: end;
+  height: 400px;
+  position: absolute;
+  top: 90%;
+  left: 95%;
+}
+.block1 .group3 img {
+  position: absolute;
+  bottom: 40px;
+}
+
+/*# sourceMappingURL=block.module.css.map */

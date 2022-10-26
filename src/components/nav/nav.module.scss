@@ -1,14 +1,3 @@
-.header_top{
-  width: 100%;
-  height: 85px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-
-  background-color: #0E0E23;
-}
 .cult_moscov{
 
   margin-left: 181px;
@@ -97,11 +86,29 @@ nav{
     width: 252.63px;
     height: 254px;
     bottom: 80px;
-    background: url("http://localhost:3000/img/back-logo.png") no-repeat;
+    background: url("http://localhost:3000/img/back-logo.png") no-repeat -5px -2px,url("http://localhost:3000/img/back_elipse.png") no-repeat 60px 10px;
 
     .test{
-    position: relative;
-    right: 60px;
+      position: relative;
+      top:2%;
+      left: 25%;
+
+
+    }
+
+    .test:hover{
+      animation: swing 1s infinite ease-in-out;
+    }
+    @keyframes swing {
+      0%, 100% { transform: rotate(-30deg); }
+
+      50% { transform: rotate(30deg); }
+
+    }
+    .text_logo{
+      position: relative;
+      bottom: 5%;
+      right: 50%;
     }
 
   }
