@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/luna_test/static/css/main.83e03dbc.css",
-    "main.js": "/luna_test/static/js/main.2358d7d7.js",
+    "main.js": "/luna_test/static/js/main.a8c795f6.js",
     "static/js/787.79393338.chunk.js": "/luna_test/static/js/787.79393338.chunk.js",
     "static/media/ripples.png": "/luna_test/static/media/ripples.d207f490d441831e9060.png",
     "static/media/back-logo.png": "/luna_test/static/media/back-logo.c67006738ed3d3004939.png",
     "index.html": "/luna_test/index.html",
     "main.83e03dbc.css.map": "/luna_test/static/css/main.83e03dbc.css.map",
-    "main.2358d7d7.js.map": "/luna_test/static/js/main.2358d7d7.js.map",
+    "main.a8c795f6.js.map": "/luna_test/static/js/main.a8c795f6.js.map",
     "787.79393338.chunk.js.map": "/luna_test/static/js/787.79393338.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83e03dbc.css",
-    "static/js/main.2358d7d7.js"
+    "static/js/main.a8c795f6.js"
   ]
 }
