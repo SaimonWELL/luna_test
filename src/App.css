@@ -1,19 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-main{
-  background:url("http://localhost:3000/img/ripples.png") ,linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(51.12% 51.21% at 62.8% 51.17%, #2D315B 53.65%, #070921 100%) ;
+main {
+  /* background:url("http://localhost:3000/img/ripples.png") ,linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), radial-gradient(51.12% 51.21% at 62.8% 51.17%, #2D315B 53.65%, #070921 100%) ; */
+  background: #13152f;
   height: 100%;
 }
-footer{
+footer {
   background-color: #262645;
   height: 100%;
 }
-hr{
+hr {
   height: 3px;
   max-width: 100%;
 
   border: none;
-  background-color:#515169;
+  background-color: #515169;
 }
