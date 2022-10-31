@@ -1,0 +1,23 @@
+.datesStrip {
+  width: 100%;
+  height: 40px;
+  background: #690714;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  place-content: center;
+}
+
+.dateBtn {
+  font-size: 35px;
+  color: white;
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.freeDateBtn {
+  color: #96947c;
+}
