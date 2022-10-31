@@ -6,10 +6,9 @@ export default function Form() {
     return (
         <div className={styles.block_form}>
             <div className={styles.block}>
-                <h2>Будьте в курсе анонсов и новостей</h2>
+                <h2>Следи за жизнью театра в Telegram</h2>
                 <form action="URL">
-                    <input type="email"  aria-describedby="emailHelp" placeholder="ваша электронная почта" />
-                    <button type="submit" > подписаться</button>
+                    <a href={'https://t.me/lunatheatre'} target={"_blank"} > подписаться</a>
                 </form>
             </div>
         </div>
