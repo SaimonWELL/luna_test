@@ -1,4 +1,9 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Mohave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 .block_form{
 
   display: flex;
@@ -30,8 +35,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
-    button{
+    a{
 
       font-family: 'Source Sans Pro',sans-serif;
       font-style: normal;

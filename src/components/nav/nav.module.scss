@@ -86,12 +86,15 @@ nav{
     width: 252.63px;
     height: 254px;
     bottom: 80px;
-    background: url("http://localhost:3000/img/back-logo.png") no-repeat -5px -2px,url("http://localhost:3000/img/back_elipse.png") no-repeat 60px 10px;
+    background: url("/../public/img/back-logo.png")  no-repeat -5px -2px,url("/../public/img/back_elipse.png") no-repeat 60px 10px;
+
 
     .test{
+      width: 47%;
+      height: 47%;
       position: relative;
-      top:2%;
-      left: 25%;
+      top:11px;
+      left: 65px;
 
 
     }
@@ -108,9 +111,94 @@ nav{
     .text_logo{
       position: relative;
       bottom: 5%;
-      right: 50%;
+      right: 130px;
+      width: 128px;
+      height: 90px;
+
     }
 
   }
 
+}
+
+@media (max-width: 1400px){
+  nav{
+    width: 100%;
+    height: 65px;
+
+    background-color: #262645;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ul{
+      display: flex;
+      list-style: none;
+      a{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: lowercase;
+
+        color: #F4F4F4;
+      }
+    }
+    .rightMenu{
+      margin-right: 180px;
+      align-items: center;
+
+      .menuItemR{
+        margin-left: 22px;
+      }
+    }
+    .leftMenu{
+      margin-left: 180px;
+      align-items: center;
+
+      .menuItemL{
+        margin-right: 22px;
+      }
+    }
+    .logo{
+      position: relative;
+      width: 252.63px;
+      height: 254px;
+      bottom: 80px;
+      background: url("/../public/img/back-logo.png")  no-repeat -5px -2px,url("/../public/img/back_elipse.png") no-repeat 60px 10px;
+
+
+      .test{
+        width: 40%;
+        height: 40%;
+        position: relative;
+        top:11px;
+        left: 65px;
+
+
+      }
+
+      .test:hover{
+        animation: swing 1s infinite ease-in-out;
+      }
+      @keyframes swing {
+        0%, 100% { transform: rotate(-30deg); }
+
+        50% { transform: rotate(30deg); }
+
+      }
+      .text_logo{
+        position: relative;
+        bottom: 5%;
+        right: 35%;
+        width: 110px;
+        height: 70px;
+
+
+      }
+
+    }
+
+  }
 }
