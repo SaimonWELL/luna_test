@@ -4,7 +4,6 @@ import styles from "./nav.module.scss";
 
 
 
-
 function Nav(){
 
     return(
@@ -17,8 +16,8 @@ function Nav(){
                     <li className={styles.menuItemL}><a href="#">театр</a></li>
                 </ul>
                 <div className={styles.logo}><a href="#" >
-                    <img className={styles.test} src="./img/moon_logo.png" alt="moon"  />
-                    <img className={styles.text_logo} id={'href'} src="./img/text_logo.png" alt="" width={'128px'} height={'90px'} />
+                    <img className={styles.test} src="/img/moon_logo.png" alt="" width={'124px'} height={'124px'} />
+                    <img className={styles.text_logo} id={'href'} src="/img/text_logo.png" alt="" width={'128px'} height={'90px'} />
 
                 </a></div>
                 <ul className={styles.rightMenu}>

@@ -1,14 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 import styles from "./news.module.scss";
-import axios from "axios";
 
 
 
 
+export default function News() {
 
-export default function News({itemsNews}) {
-    console.log(itemsNews)
     const content = [
         {
 
@@ -47,11 +45,11 @@ export default function News({itemsNews}) {
                 </a>
             </div>
             <div className={styles.newsContent}>
-                <div className={styles.image}><img src="./img/news_bg.png" alt=""/></div>
+                <div className={styles.image}><img src="/img/news_bg.png" alt=""/></div>
                 <div className={styles.news}>
-                    {itemsNews.map(item => (
+                    {content.map(item => (
                         <div className={styles.news_item} key={item.id}>
-                            <p className={styles.item_title}>{item.attributes.title}</p>
+                            <p className={styles.item_title}>{item.title}</p>
                             <p>{item.date}</p>
                         </div>
                     ))}

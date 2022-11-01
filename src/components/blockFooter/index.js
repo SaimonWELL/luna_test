@@ -17,17 +17,17 @@ export default function Block(){
 
                 </div>
                 <div className={styles.group2}>
-                    <a href=""><img src="./img/sponsor/1.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/2.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/3.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/4.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/5.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/6.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/7.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/8.png" alt=""/></a>
-                    <a href=""><img src="./img/sponsor/9.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/1.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/2.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/3.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/4.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/5.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/6.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/7.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/8.png" alt=""/></a>
+                    <a href=""><img src="/img/sponsor/9.png" alt=""/></a>
                 </div>
-                <div className={styles.group3}><img src="./img/footer_logo.png" alt=""/></div>
+                <div className={styles.group3}><img src="/img/footer_logo.png" alt=""/></div>
             </div>
             <div className={styles.block2}>
                 <div className={styles.group2}></div>

@@ -86,7 +86,7 @@ nav .logo {
   width: 252.63px;
   height: 254px;
   bottom: 80px;
-  background: url("//img/back-logo.png") no-repeat;
+  background: url("http://localhost:3000/img/back-logo.png") no-repeat;
 }
 nav .logo .test {
   position: relative;
