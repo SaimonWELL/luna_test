@@ -1,48 +1,46 @@
-.cult_moscov{
-
+.cult_moscov {
   margin-left: 181px;
   display: flex;
   flex-direction: row;
-  p{
-    font-family: 'Montserrat';
+  p {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     margin-left: 16px;
   }
 }
-.phone_blind{
+.phone_blind {
   margin-right: 181px;
 
   display: flex;
   flex-direction: column;
 
-
-  .phone{
-    font-family: 'Mohave';
+  .phone {
+    font-family: "Mohave";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 35px;
     text-decoration: none;
 
-    color: #ECECEC;
+    color: #ececec;
   }
-  .blind{
-    font-family: 'Montserrat';
+  .blind {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
 
-    color: #ECECEC;
+    color: #ececec;
   }
 }
-nav{
+nav {
   width: 100%;
   height: 65px;
 
@@ -51,66 +49,76 @@ nav{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  ul{
+  ul {
     display: flex;
     list-style: none;
-    a{
-      font-family: 'Montserrat';
+    a {
+      font-family: "Montserrat";
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
       text-transform: lowercase;
 
-      color: #F4F4F4;
+      color: #f4f4f4;
     }
   }
-  .rightMenu{
+  .rightMenu {
     margin-right: 180px;
     align-items: center;
 
-    .menuItemR{
+    .menuItemR {
       margin-left: 22px;
     }
   }
-  .leftMenu{
+  .leftMenu {
     margin-left: 180px;
     align-items: center;
 
-    .menuItemL{
+    .menuItemL {
       margin-right: 22px;
     }
   }
-  .logo{
+  .logo {
     position: relative;
     width: 252.63px;
     height: 254px;
     bottom: 80px;
-    background: url("http://localhost:3000/img/back-logo.png") no-repeat -5px -2px,url("http://localhost:3000/img/back_elipse.png") no-repeat 60px 10px;
+    background: url("./back-logo.png") no-repeat -5px -2px,
+      url("./back_elipse.png") no-repeat 60px 10px;
 
-    .test{
+    .test {
       position: relative;
-      top:2%;
+      top: 2%;
       left: 25%;
-
-
     }
 
-    .test:hover{
-      animation: swing 1s infinite ease-in-out;
+    .test:hover {
+      animation: swing 2s 1 ease-out;
     }
+
     @keyframes swing {
-      0%, 100% { transform: rotate(-30deg); }
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
 
-      50% { transform: rotate(30deg); }
+      10%,
+      50%,
+      90% {
+        transform: rotate(20deg);
+      }
 
+      30%,
+      70% {
+        transform: rotate(-20deg);
+      }
     }
-    .text_logo{
+    .text_logo {
       position: relative;
       bottom: 5%;
       right: 50%;
     }
-
   }
-
 }
+
