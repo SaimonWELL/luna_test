@@ -6,11 +6,12 @@ import Header from "./components/header";
 import Nav from "./components/nav";
 import Slider from "./components/slider";
 import Calendar from "./components/calendar";
-import Item from "./components/items";
 import News from "./components/news";
 import Form from "./components/form";
 import Block from "./components/blockFooter";
 import LastBlock from "./components/blockFooterLast";
+
+const today = new Date("2022-10-17");
 
 function App() {
   const [items, setItems] = React.useState([]);
@@ -18,9 +19,12 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   const apiUrl2 =
-    "http://theatre.restomatik.ru:1337/api/articles?sort[0]=publishedAt%3Adesc&pagination[pageSize]=4";
+    "http://theatre.restomatik.ru:1337/api/articles" +
+    "?sort[0]=publishedAt%3Adesc&pagination[pageSize]=4";
   const apiUrl =
-    "http://theatre.restomatik.ru:1337/api/shows?filters[date][$gt]=2022-10-19&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=4";
+    `http://theatre.restomatik.ru:1337/api/shows` +
+    `?filters[date][$gt]=${today.toISOString().slice(0, 10)}` +
+    `&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=4`;
   React.useEffect(() => {
     async function fetchData() {
       try {
@@ -48,10 +52,7 @@ function App() {
       <Nav />
       <Slider items={items} />
       <main>
-        <section>
-          <Calendar />
-          <Item />
-        </section>
+        <section>{!isLoading ? <Calendar items={items} /> : "s"}</section>
         <section>
           <News itemsNews={itemsNews} />
           <Form />
