@@ -14,6 +14,16 @@ import "./styles.css";
 import { Autoplay, EffectFade } from "swiper";
 
 export default function Slider({ items }) {
+  function isPremiere(offer) {
+    if (offer.attributes.play.data.attributes.isPremiere) {
+      return (
+        < div className={styles.premiere} >
+          <a href={`${offer.webSite}`} target={"_blank"}>Премьера</a>
+        </div>
+      );
+    }
+  }
+
   return (
     <>
       <Swiper
@@ -33,9 +43,7 @@ export default function Slider({ items }) {
                 <div className={styles.block1}>
                   <p className={styles.author}>{offer.attributes.play.data.attributes.director.data.attributes.fullname}</p>
                   <p className={styles.title}>{offer.attributes.play.data.attributes.title}</p>
-                  <div className={styles.premiere}>
-                    <a href={`${offer.webSite}`} target={"_blank"}>Премьера</a>
-                  </div>
+                  {isPremiere(offer)}
                 </div>
                 <div className={styles.block2}>
                   <p className={styles.date}>{offer.attributes.date_str}</p>
