@@ -120,10 +120,7 @@
 }
 .startCalendar {
   z-index: 1;
-  position: relative;
-  top: 400px;
-  width: 120%;
-  left: -50px;
+  width: 100%;
   height: 250px;
   filter: blur(20px);
   transform: matrix(1, 0, 0, -1, 0, 0);
@@ -131,11 +128,22 @@
   padding-right: 20px;
   .overlay {
     width: 100%;
-    height: 100%;
+    height: 250px;
     background: black;
     opacity: 0.8;
   }
 }
+
+.blurContainer {
+  z-index: 1;
+  position: relative;
+  top: 400px;
+  width: 120%;
+  left: -150px;
+  height: 250px;
+  overflow: hidden;
+}
+
 .startCalendarText {
   z-index: 2;
   position: relative;

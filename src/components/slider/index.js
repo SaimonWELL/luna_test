@@ -17,8 +17,10 @@ export default function Slider({ items }) {
   function isPremiere(offer) {
     if (offer.attributes.play.data.attributes.isPremiere) {
       return (
-        < div className={styles.premiere} >
-          <a href={offer.webSite} target={"_blank"}>Премьера</a>
+        <div className={styles.premiere}>
+          <a href={offer.webSite} target={"_blank"}>
+            Премьера
+          </a>
         </div>
       );
     }
@@ -52,7 +54,9 @@ export default function Slider({ items }) {
                         .attributes.fullname
                     }
                   </p>
-                  <p className={styles.title}>{offer.attributes.play.data.attributes.title}</p>
+                  <p className={styles.title}>
+                    {offer.attributes.play.data.attributes.title}
+                  </p>
                   {isPremiere(offer)}
                 </div>
                 <div className={styles.block2}>
@@ -72,14 +76,16 @@ export default function Slider({ items }) {
                   </div>
                 </div>
               </div>
-              <div
-                className={styles.startCalendar}
-                style={{
-                  background: `url('http://theatre.restomatik.ru:1337${offer.attributes.play.data.attributes.cover.data.attributes.url}')no-repeat center `,
-                  backgroundSize: "cover",
-                }}
-              >
-                <div className={styles.overlay}></div>
+              <div className={styles.blurContainer}>
+                <div
+                  className={styles.startCalendar}
+                  style={{
+                    background: `url('http://theatre.restomatik.ru:1337${offer.attributes.play.data.attributes.cover.data.attributes.url}')no-repeat center `,
+                    backgroundSize: "cover",
+                  }}
+                >
+                  <div className={styles.overlay}></div>
+                </div>
               </div>
               <div className={styles.startCalendarText}>
                 <h1>ОКТЯБРЬ</h1>
