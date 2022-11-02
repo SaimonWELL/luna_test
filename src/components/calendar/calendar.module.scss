@@ -20,8 +20,8 @@
   width: 60px;
   height: 40px;
 
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
 
   transition: font-size 0.1s, height 0.1s, margin-top 0.1s;
 }
@@ -47,8 +47,8 @@
 .selectedCalendar {
   width: 60px;
   height: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .calendarLuna {
@@ -98,4 +98,15 @@
 .dateBtn:not(.freeDateBtn):hover > .weekDay {
   margin-top: 14px;
   font-size: 40px;
+}
+
+.curLeft {
+  position: absolute;
+  left: 0;
+  top: calc(100vh + 220px);
+}
+.curRight {
+  position: absolute;
+  right: 0;
+  top: calc(100vh + 220px);
 }
