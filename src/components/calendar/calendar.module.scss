@@ -20,6 +20,18 @@
 
   margin-left: 10px;
   margin-right: 10px;
+
+  transition: font-size 0.1s, height 0.1s, margin-top 0.1s;
+}
+
+.dateBtn:not(.freeDateBtn):hover {
+  font-size: 50px;
+  height: 60px;
+
+  margin-top: -5px;
+
+  background: #690714;
+  z-index: 1;
 }
 
 .freeDateBtn {
@@ -29,7 +41,6 @@
 .selectedCalendar {
   width: 60px;
   height: 40px;
-
   margin-left: 10px;
   margin-right: 10px;
 }
