@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Mohave&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mohave&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
 
 .block_form {
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 65%;
   height: 300px;
-  border-top: 2px solid #A3A3A3;
+  border-top: 2px solid #a3a3a3;
   margin: 0 auto;
   margin-top: 40px;
   padding-bottom: 50px;
@@ -23,43 +22,45 @@
   }
 
   h2 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
     line-height: 66px;
 
-    color: #CDAF0D;
+    color: #cdaf0d;
   }
 
   form {
-    margin-top: 70px;
     display: flex;
     flex-direction: row;
+
     align-items: center;
+    place-items: center;
+
+    img {
+      cursor: pointer;
+    }
 
     button {
-
-      font-family: 'Source Sans Pro', sans-serif;
+      font-family: "Source Sans Pro", sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
-      margin-left: 30px;
+      margin-left: 15px;
       border: none;
       padding: 5px;
       border: 2px solid #6e6e6d;
 
       cursor: pointer;
 
-
       color: #d7d7c5;
       background: none;
-
     }
   }
 
   input {
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     border: none;
     width: 70%;
@@ -68,19 +69,16 @@
     background: none;
     border-bottom: 2px solid #b4b5bf;
 
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
-
-
-
   }
 
   ::placeholder {
     color: #fdfdfe;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -94,3 +92,4 @@
     border-bottom: 2px solid #b4b5bf;
   }
 }
+
