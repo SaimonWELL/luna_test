@@ -60,6 +60,7 @@ export default function Calendar({ items }) {
   return (
     <>
       <div className={styles.datesStrip}>
+      <img src="/img/curtainsLeft.png" alt="" />
         {dates.map(({ date, free }) => (
           <DateBtn
             key={date.getTime()}
@@ -68,6 +69,7 @@ export default function Calendar({ items }) {
             free={free}
           />
         ))}
+      <img src="/img/curtainsRight.png" alt="" />
       </div>
       <div className={styles.cardsContainer}>
         {items
