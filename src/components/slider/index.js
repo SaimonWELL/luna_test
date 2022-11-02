@@ -38,8 +38,7 @@ export default function Slider({ items }) {
                   </div>
                 </div>
                 <div className={styles.block2}>
-                  <p className={styles.date}>{offer.date}</p>
-                  <p className={styles.month}>{offer.month}</p>
+                  <p className={styles.date}>{offer.attributes.date_str}</p>
                   <div className={styles.buy}>
                     <a href={`${offer.attributes.tickets_link}`} target={"_blank"}>КУПИТЬ БИЛЕТ</a>
                   </div>
