@@ -24,6 +24,10 @@
   transition: font-size 0.1s, height 0.1s, margin-top 0.1s;
 }
 
+.dateBtn:not(.freeDateBtn) {
+  cursor: pointer;
+}
+
 .dateBtn:not(.freeDateBtn):hover {
   font-size: 50px;
   height: 60px;
