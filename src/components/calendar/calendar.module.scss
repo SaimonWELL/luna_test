@@ -8,6 +8,8 @@
 
   align-items: center;
   place-content: center;
+
+  margin-bottom: 80px;
 }
 
 .dateBtn {
@@ -75,6 +77,25 @@
   flex-direction: row;
   align-items: center;
   place-content: center;
+}
 
-  margin-top: 35px;
+.selectedWeek {
+  font-size: 40px;
+  font-family: "Montserrat";
+
+  color: white;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.weekDay {
+  font-size: 30px;
+  font-family: "Montserrat";
+
+  transition: font-size 0.1s, margin-top 0.1s;
+}
+
+.dateBtn:not(.freeDateBtn):hover > .weekDay {
+  margin-top: 14px;
+  font-size: 40px;
 }

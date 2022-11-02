@@ -30,6 +30,7 @@ export default function Calendar({ items }) {
   const [selected, setSelected] = React.useState(getFirstDate());
 
   function DateBtn({ date, selected, free }) {
+    const week = ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
     return selected ? (
       <div className={styles.selectedCalendar}>
         <img
@@ -39,6 +40,7 @@ export default function Calendar({ items }) {
           alt=""
         />
         <div className={styles.selectedDate}>{date.getDate()}</div>
+        <div className={styles.selectedWeek}>{week[date.getDay()]}</div>
       </div>
     ) : (
       <div
@@ -50,6 +52,7 @@ export default function Calendar({ items }) {
         }}
       >
         {date.getDate()}
+        <div className={styles.weekDay}>{week[date.getDay()]}</div>
       </div>
     );
   }
