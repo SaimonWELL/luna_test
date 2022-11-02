@@ -67,9 +67,15 @@ export default function Calendar({ items }) {
         ))}
       </div>
       <div className={styles.cardsContainer}>
-        {items.map((item) => (
-          <Item item={item} />
-        ))}
+        {items
+          .filter(
+            (item) =>
+              new Date(item.attributes.date).getTime() >= selected.getTime()
+          )
+          .slice(0, 4)
+          .map((item) => (
+            <Item key={item.attributes.date} item={item} />
+          ))}
       </div>
     </>
   );

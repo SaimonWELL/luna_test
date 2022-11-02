@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./item.module.scss";
 
 export default function Item({ item }) {
-  console.log(item);
   const date = new Date(item.attributes.date);
   return (
     <>

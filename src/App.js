@@ -24,7 +24,7 @@ function App() {
   const apiUrl =
     `http://theatre.restomatik.ru:1337/api/shows` +
     `?filters[date][$gt]=${today.toISOString().slice(0, 10)}` +
-    `&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=4`;
+    `&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=5`;
   React.useEffect(() => {
     async function fetchData() {
       try {
