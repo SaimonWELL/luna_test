@@ -18,7 +18,7 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
 
   const apiUrl2 =
-    "http://theatre.restomatik.ru:1337/api/articles?sort[0]=publishedAt%3Adesc&pagination[pageSize]=5";
+    "http://theatre.restomatik.ru:1337/api/articles?sort[0]=publishedAt%3Adesc&pagination[pageSize]=4";
   const apiUrl =
     "http://theatre.restomatik.ru:1337/api/shows?filters[date][$gt]=2022-10-19&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=4";
   React.useEffect(() => {
