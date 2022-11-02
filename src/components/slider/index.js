@@ -14,7 +14,6 @@ import "./styles.css";
 import { Autoplay, EffectFade } from "swiper";
 
 export default function Slider({ items }) {
-  console.log(items);
   return (
     <>
       <Swiper
