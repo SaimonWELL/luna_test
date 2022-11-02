@@ -31,7 +31,7 @@ export default function News({ itemsNews }) {
                   {item.attributes.title}
                 </a>
               </p>
-              <p>{item.attributes.date_str}</p>
+              <p className={styles.newsDate}>{item.attributes.date_str}</p>
             </div>
           ))}
         </div>
