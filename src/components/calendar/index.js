@@ -66,7 +66,11 @@ export default function Calendar({ items }) {
           />
         ))}
       </div>
-      <Item />
+      <div className={styles.cardsContainer}>
+        {items.map((item) => (
+          <Item item={item} />
+        ))}
+      </div>
     </>
   );
 }
