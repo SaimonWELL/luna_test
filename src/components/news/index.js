@@ -18,7 +18,7 @@ export default function News({ itemsNews }) {
                     {itemsNews.map(item => (
                         <div className={styles.news_item} key={item.id}>
                             <p className={styles.item_title}>{item.attributes.title}</p>
-                            <p>{item.date}</p>
+                            <p>{item.attributes.date_str}</p>
                         </div>
                     ))}
                 </div>
