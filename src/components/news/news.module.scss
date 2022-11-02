@@ -66,7 +66,7 @@
     margin-left: 100px;
 
     .news_item {
-      margin-top: 40px;
+      margin-top: 25px;
       width: 400px;
 
       display: flex;
@@ -88,6 +88,9 @@
         line-height: 200%;
 
         color: rgba(244, 244, 244, 0.5);
+      }
+      .newsDate {
+        font-size: 17px;
       }
     }
   }
