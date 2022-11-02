@@ -2,8 +2,18 @@ import React from "react";
 
 import styles from "./calendar.module.scss";
 
-function DateBtn({ date, selected: _, free }) {
-  return (
+function DateBtn({ date, selected, free }) {
+  return selected ? (
+    <div className={styles.selectedCalendar}>
+      <img
+        className={styles.calendarLuna}
+        src="/img/calendar_luna.svg"
+        width="80px"
+        alt=""
+      />
+      <div className={styles.selectedDate}>{date}</div>
+    </div>
+  ) : (
     <div className={styles.dateBtn + (free ? " " + styles.freeDateBtn : "")}>
       {date}
     </div>
