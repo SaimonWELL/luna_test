@@ -3,17 +3,31 @@ import Item from "../../components/items";
 
 import styles from "./calendar.module.scss";
 
-export default function Calendar() {
+export default function Calendar({ items }) {
   const dates = Array.from({ length: 15 }, (_, i) => {
-    const date = new Date("2022-10-1");
+    const date = new Date("2022-10-17");
     date.setTime(date.getTime() + 1000 * 60 * 60 * 24 * i);
     return {
       date: date,
-      free: false,
+      free: !items.some((item) => {
+        const itemdate = new Date(item.attributes.date);
+        return itemdate.getTime() === date.getTime();
+      }),
     };
   });
 
-  const [selected, setSelected] = React.useState(new Date("2022-10-3"));
+  const getFirstDate = () => {
+    for (let i = 0; i < dates.length; i++) {
+      const date = dates[i];
+      // console.log(date);
+      if (!date.free) {
+        return date.date;
+      }
+    }
+    return new Date("2022-10-17");
+  };
+
+  const [selected, setSelected] = React.useState(getFirstDate());
 
   function DateBtn({ date, selected, free }) {
     return selected ? (
