@@ -16,6 +16,9 @@ function Nav() {
           <li className={styles.menuItemL}>
             <a href="http://www.lunatheatre.ru/actors">труппа</a>
           </li>
+          <li className={styles.menuItemL}>
+            <a href="http://www.lunatheatre.ru/pages/o-lune">театр</a>
+          </li>
         </ul>
         <div className={styles.logo}>
           <a href="#">

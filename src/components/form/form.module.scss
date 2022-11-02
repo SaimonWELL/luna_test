@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
-.block_form{
+.block_form {
 
   display: flex;
   flex-direction: column;
@@ -12,12 +18,12 @@
   margin-top: 40px;
   padding-bottom: 50px;
 
-  .block{
+  .block {
     margin-top: 70px;
   }
 
-  h2{
-    font-family: 'Source Sans Pro',sans-serif;
+  h2 {
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -25,15 +31,16 @@
 
     color: #CDAF0D;
   }
-  form{
+
+  form {
     margin-top: 70px;
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    button{
+    button {
 
-      font-family: 'Source Sans Pro',sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       font-style: normal;
       font-weight: 600;
       font-size: 20px;
@@ -50,7 +57,8 @@
 
     }
   }
-  input{
+
+  input {
     color: #FFFFFF;
     text-align: center;
     border: none;
@@ -69,6 +77,7 @@
 
 
   }
+
   ::placeholder {
     color: #fdfdfe;
     font-family: 'Montserrat';
@@ -77,7 +86,8 @@
     font-size: 24px;
     line-height: 29px;
   }
-  input:focus{
+
+  input:focus {
     outline: none;
     background: none;
     border: none;
