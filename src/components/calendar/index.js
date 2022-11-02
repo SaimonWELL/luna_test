@@ -1,27 +1,19 @@
 import React from "react";
+import Item from "../../components/items";
 
 import styles from "./calendar.module.scss";
 
 export default function Calendar() {
-  const dates = [
-    { date: 1, free: false },
-    { date: 2, free: false },
-    { date: 3, free: false },
-    { date: 4, free: false },
-    { date: 5, free: false },
-    { date: 6, free: true },
-    { date: 7, free: false },
-    { date: 8, free: false },
-    { date: 9, free: true },
-    { date: 10, free: true },
-    { date: 11, free: false },
-    { date: 12, free: false },
-    { date: 13, free: false },
-    { date: 14, free: false },
-    { date: 15, free: true },
-  ];
+  const dates = Array.from({ length: 15 }, (_, i) => {
+    const date = new Date("2022-10-1");
+    date.setTime(date.getTime() + 1000 * 60 * 60 * 24 * i);
+    return {
+      date: date,
+      free: false,
+    };
+  });
 
-  const [selected, setSelected] = React.useState(3);
+  const [selected, setSelected] = React.useState(new Date("2022-10-3"));
 
   function DateBtn({ date, selected, free }) {
     return selected ? (
@@ -32,7 +24,7 @@ export default function Calendar() {
           width="80px"
           alt=""
         />
-        <div className={styles.selectedDate}>{date}</div>
+        <div className={styles.selectedDate}>{date.getDate()}</div>
       </div>
     ) : (
       <div
@@ -43,7 +35,7 @@ export default function Calendar() {
           }
         }}
       >
-        {date}
+        {date.getDate()}
       </div>
     );
   }
@@ -52,9 +44,15 @@ export default function Calendar() {
     <>
       <div className={styles.datesStrip}>
         {dates.map(({ date, free }) => (
-          <DateBtn date={date} selected={selected === date} free={free} />
+          <DateBtn
+            key={date.getTime()}
+            date={date}
+            selected={selected.getTime() == date.getTime()}
+            free={free}
+          />
         ))}
       </div>
+      <Item />
     </>
   );
 }

@@ -50,7 +50,6 @@ function App() {
       <main>
         <section>
           <Calendar />
-          <Item />
         </section>
         <section>
           <News itemsNews={itemsNews} />

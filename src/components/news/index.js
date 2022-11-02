@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./news.module.scss";
 
 export default function News({ itemsNews }) {
-  console.log(itemsNews);
+  // console.log(itemsNews);
   return (
     <>
       <div className={styles.header}>
@@ -39,3 +39,4 @@ export default function News({ itemsNews }) {
     </>
   );
 }
+
