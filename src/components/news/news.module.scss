@@ -1,5 +1,5 @@
-.header{
-  height:85px;
+.header {
+  height: 85px;
   max-width: 100%;
 
   display: flex;
@@ -11,10 +11,10 @@
   margin-left: 165px;
   margin-top: 71px;
 
-  border-bottom: 2px solid #A3A3A3;
+  border-bottom: 2px solid #a3a3a3;
 
-  .title{
-    font-family: 'Source Sans Pro',sans-serif;
+  .title {
+    font-family: "Source Sans Pro", sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 59px;
@@ -22,31 +22,30 @@
 
     text-transform: uppercase;
 
-    color: #CDAF0D;
+    color: #cdaf0d;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  .btn{
+  .btn {
     width: 152px;
     height: 35px;
-    border: 1px solid #CDAF0D;
+    border: 1px solid #cdaf0d;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    p{
-      font-family: 'Montserrat';
+    p {
+      font-family: "Montserrat";
       font-style: normal;
       font-weight: 400;
       font-size: 19px;
       line-height: 22px;
 
-      color: #E6C714;
+      color: #e6c714;
     }
-
   }
 }
-.newsContent{
+.newsContent {
   max-width: 100%;
 
   display: flex;
@@ -57,47 +56,47 @@
   margin-right: 140px;
   margin-left: 140px;
 
-  h3{
+  h3 {
     max-width: 100%;
   }
 
-  .news{
+  .news {
     display: flex;
     flex-direction: column;
     margin-left: 100px;
 
-    .image{
-
-    }
-
-    .news_item{
+    .news_item {
       margin-top: 40px;
       width: 400px;
 
       display: flex;
       flex-direction: column;
-      .item_title{
-        font-family: 'Source Sans Pro', sans-serif;
+      .item_title {
+        font-family: "Source Sans Pro", sans-serif;
         font-style: normal;
         font-weight: 600;
         font-size: 22.4776px;
         line-height: 28px;
 
-        color: #FFFDF2;
-
+        color: #fffdf2;
       }
-      p{
-        font-family: 'Montserrat';
+      p {
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
         font-size: 12.7373px;
         line-height: 200%;
 
-
         color: rgba(244, 244, 244, 0.5);
-
       }
-
     }
   }
+}
+
+.newslink {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.newslink:hover {
+  color: rgba(255, 255, 255, 1);
 }
