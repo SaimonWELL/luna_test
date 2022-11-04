@@ -63,7 +63,7 @@ export default function Calendar({ items }) {
           <DateBtn
             key={date.getTime()}
             date={date}
-            selected={selected.getTime() == date.getTime()}
+            selected={selected.getTime() === date.getTime()}
             free={free}
           />
         ))}

@@ -114,6 +114,13 @@ $wk-font-size: 20px;
   text-align: center;
 }
 
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  place-content: center;
+}
+
 .curLeft {
   position: absolute;
   left: 0;
