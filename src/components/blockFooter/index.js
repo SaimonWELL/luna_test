@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 
 import styles from "./block.module.scss";
 
@@ -31,7 +31,7 @@ export default function Block() {
         </div>
         <div className={styles.group2}>
           {SPONSORS.map((link, i) => (
-            <a href={link}>
+            <a key={i} href={link}>
               <img src={`/img/sponsor/${i + 1}.png`} alt="" />
             </a>
           ))}
@@ -46,4 +46,3 @@ export default function Block() {
     </>
   );
 }
-

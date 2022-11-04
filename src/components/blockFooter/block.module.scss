@@ -1,76 +1,72 @@
-.block1{
-
+.block1 {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   position: relative;
   margin-bottom: 40px;
 
-  .group1{
+  .group1 {
     margin-left: 165px;
     height: 184px;
 
     .item1 {
-      a, h1 {
-        font-family: 'Mohave', sans-serif;
+      a,
+      h1 {
+        font-family: "Mohave", sans-serif;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
 
-
-        color: #FFFFFF;
+        color: #ffffff;
       }
     }
-    .item2{
-
-      p{
-        font-family: 'Montserrat';
+    .item2 {
+      p {
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         margin-top: 45px;
 
-
         color: white;
       }
     }
-
-
   }
-  .group2{
+  .group2 {
     width: 400px;
     height: 200px;
 
     margin-left: 122px;
 
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    a{height: 40px}
-    img{
+    a {
+      height: 40px;
+    }
+    img {
       margin-right: 10px;
       margin-bottom: 25px;
     }
-    a:last-child img{vertical-align: bottom}
-
+    a:last-child img {
+      vertical-align: bottom;
+    }
   }
-  .group3{
+  .group3 {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     height: 400px;
     position: absolute;
-    top:90%;
+    top: 90%;
     left: 95%;
 
-    img{
-    position: absolute;
+    img {
+      position: absolute;
 
       bottom: 40px;
-
-
     }
   }
 }
+
