@@ -31,28 +31,26 @@ export default function Calendar({ items }) {
 
   function DateBtn({ date, selected, free }) {
     const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
-    return selected ? (
-      <div className={styles.selectedCalendar}>
-        <img
-          className={styles.calendarLuna}
-          src="/img/calendar_luna.svg"
-          width="80px"
-          alt=""
-        />
-        <div className={styles.selectedDate}>{date.getDate()}</div>
-        <div className={styles.selectedWeek}>{week[date.getDay()]}</div>
-      </div>
-    ) : (
-      <div
-        className={styles.dateBtn + (free ? " " + styles.freeDateBtn : "")}
-        onClick={() => {
-          if (!free) {
-            setSelected(date);
+    return (
+      <div className={styles.dateBtnContainer}>
+        {selected ? <img src="/img/calendar_luna.svg" alt="" /> : null}
+        <div
+          className={
+            selected
+              ? styles.dateContainerSelected
+              : free
+              ? styles.dateContainer
+              : [styles.dateContainer, styles.dateContainerHover].join(" ")
           }
-        }}
-      >
-        {date.getDate()}
-        <div className={styles.weekDay}>{week[date.getDay()]}</div>
+          onClick={() => {
+            if (!selected && !free) {
+              setSelected(date);
+            }
+          }}
+        >
+          <div className={styles.dateNum}>{date.getDate()}</div>
+          <div className={styles.weekDay}>{week[date.getDay()]}</div>
+        </div>
       </div>
     );
   }
