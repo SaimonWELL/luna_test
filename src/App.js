@@ -11,12 +11,12 @@ import Form from "./components/form";
 import Block from "./components/blockFooter";
 import LastBlock from "./components/blockFooterLast";
 
-const today = new Date("2022-10-17");
-
 function App() {
   const [items, setItems] = React.useState([]);
   const [itemsNews, setItemsNews] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
+
+  const today = new Date();
 
   React.useEffect(() => {
     async function fetchData() {

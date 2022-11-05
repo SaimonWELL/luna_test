@@ -3,20 +3,23 @@ import Item from "../../components/items";
 
 import styles from "./calendar.module.scss";
 
+const DAY = 1000 * 60 * 60 * 24;
+
 export default function Calendar({ items }) {
-  const [selected, setSelected] = React.useState(new Date("2022-10-1"));
+  console.log(items);
   const [firstDate, setFirstDate] = React.useState(
-    (() => {
-      const date = new Date("2022-10-17");
-      date.setTime(date.getTime() - 1000 * 60 * 60 * 24 * (date.getDate() - 1));
-      return date;
-    })()
+    new Date(new Date().toISOString().slice(0, 10))
   );
+  const [selected, setSelected] = React.useState(() => {
+    const date = new Date();
+    date.setTime(firstDate.getTime() + 2 * DAY);
+    return date;
+  });
 
   const dates = React.useMemo(() => {
     return Array.from({ length: 15 }, (_, i) => {
       const date = new Date();
-      date.setTime(firstDate.getTime() + 1000 * 60 * 60 * 24 * i);
+      date.setTime(firstDate.getTime() + i * DAY);
       return {
         date: date,
         free: !items.some((item) => {
@@ -25,7 +28,7 @@ export default function Calendar({ items }) {
         }),
       };
     });
-  }, [firstDate]);
+  }, [firstDate, items]);
 
   function DateBtn({ date, selected, free }) {
     const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
@@ -54,10 +57,9 @@ export default function Calendar({ items }) {
   }
 
   function moveDate(days) {
-    console.log(days);
     setFirstDate((prev) => {
       const d = new Date();
-      d.setTime(prev.getTime() + days * 1000 * 24 * 60 * 60);
+      d.setTime(prev.getTime() + days * DAY);
       return d;
     });
   }
