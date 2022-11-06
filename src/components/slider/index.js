@@ -28,14 +28,12 @@ const MONTHS = [
   "ДЕКАБРЬ",
 ];
 
-export default function Slider({ items }) {
+export default function Slider({ items, firstDate }) {
   function isPremiere(offer) {
     if (offer.attributes.play.data.attributes.isPremiere) {
       return (
         <div className={styles.premiere}>
-          <a href={offer.webSite} target={"_blank"}>
-            Премьера
-          </a>
+          <a href={offer.webSite}>Премьера</a>
         </div>
       );
     }
@@ -82,10 +80,7 @@ export default function Slider({ items }) {
                     {offer.attributes.date_str.split(" ")[1]}
                   </p>
                   <div className={styles.buy}>
-                    <a
-                      href={`${offer.attributes.tickets_link}`}
-                      target={"_blank"}
-                    >
+                    <a href={`${offer.attributes.tickets_link}`}>
                       КУПИТЬ БИЛЕТ
                     </a>
                   </div>
@@ -103,14 +98,14 @@ export default function Slider({ items }) {
                 </div>
               </div>
               <div className={styles.startCalendarText}>
-                <h1>{MONTHS[new Date().getMonth()]}</h1>
+                <h1>{MONTHS[firstDate.getMonth()]}</h1>
                 <div className={styles.buttons}>
-                  <a href="http://www.lunatheatre.ru/afisha" target={"_blank"}>
+                  <a href="http://www.lunatheatre.ru/afisha">
                     <div className={styles.post}>
                       <p>Афиша</p>
                     </div>
                   </a>
-                  <a href="http://www.lunatheatre.ru/shows" target={"_blank"}>
+                  <a href="http://www.lunatheatre.ru/shows">
                     <div className={styles.allPost}>
                       <p>Все спектакли</p>
                     </div>

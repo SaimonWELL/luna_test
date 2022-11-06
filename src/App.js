@@ -45,13 +45,27 @@ function App() {
     fetchData();
   }, []);
 
+  const [firstDate, setFirstDate] = React.useState(
+    new Date(new Date().toISOString().slice(0, 10))
+  );
+
   return (
     <>
       <Header />
       <Nav />
-      <Slider items={items} />
+      <Slider firstDate={firstDate} items={items} />
       <main>
-        <section>{!isLoading ? <Calendar items={items} /> : "s"}</section>
+        <section>
+          {!isLoading ? (
+            <Calendar
+              firstDate={firstDate}
+              setFirstDate={setFirstDate}
+              items={items}
+            />
+          ) : (
+            "s"
+          )}
+        </section>
         <section>
           <News itemsNews={itemsNews} />
           <Form />

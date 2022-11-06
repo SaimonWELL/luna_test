@@ -5,11 +5,7 @@ import styles from "./calendar.module.scss";
 
 const DAY = 1000 * 60 * 60 * 24;
 
-export default function Calendar({ items }) {
-  console.log(items);
-  const [firstDate, setFirstDate] = React.useState(
-    new Date(new Date().toISOString().slice(0, 10))
-  );
+export default function Calendar({ firstDate, setFirstDate, items }) {
   const [selected, setSelected] = React.useState(() => {
     const date = new Date();
     date.setTime(firstDate.getTime() + 2 * DAY);
