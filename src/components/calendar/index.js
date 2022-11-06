@@ -101,8 +101,8 @@ export default function Calendar({ items }) {
               new Date(item.attributes.date).getTime() >= selected.getTime()
           )
           .slice(0, 4)
-          .map((item) => (
-            <Item key={item.attributes.date} item={item} />
+          .map((item, i) => (
+            <Item key={i} item={item} />
           ))}
       </div>
     </>

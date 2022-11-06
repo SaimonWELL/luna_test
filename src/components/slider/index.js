@@ -13,6 +13,21 @@ import "./styles.css";
 // import required modules
 import { Autoplay, EffectFade } from "swiper";
 
+const MONTHS = [
+  "ЯНВАРЬ",
+  "ФЕВРАЛЬ",
+  "МАРТ",
+  "АПРЕЛЬ",
+  "МАЙ",
+  "ИЮНЬ",
+  "ИЮЛЬ",
+  "АВГУСТ",
+  "СЕНТЯБРЬ",
+  "ОКТЯБРЬ",
+  "НОЯБРЬ",
+  "ДЕКАБРЬ",
+];
+
 export default function Slider({ items }) {
   function isPremiere(offer) {
     if (offer.attributes.play.data.attributes.isPremiere) {
@@ -88,7 +103,7 @@ export default function Slider({ items }) {
                 </div>
               </div>
               <div className={styles.startCalendarText}>
-                <h1>ОКТЯБРЬ</h1>
+                <h1>{MONTHS[new Date().getMonth()]}</h1>
                 <div className={styles.buttons}>
                   <a href="http://www.lunatheatre.ru/afisha" target={"_blank"}>
                     <div className={styles.post}>

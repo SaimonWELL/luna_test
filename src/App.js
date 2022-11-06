@@ -16,8 +16,6 @@ function App() {
   const [itemsNews, setItemsNews] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(true);
 
-  const today = new Date();
-
   React.useEffect(() => {
     async function fetchData() {
       const apiUrl2 =
@@ -25,8 +23,8 @@ function App() {
         "?sort[0]=publishedAt%3Adesc&pagination[pageSize]=4";
       const apiUrl =
         `http://theatre.restomatik.ru:1337/api/shows` +
-        `?filters[date][$gt]=${today.toISOString().slice(0, 10)}` +
-        `&sort[0]=date&populate=play.cover,play.director&pagination[pageSize]=5`;
+        `?filters[date][$gt]=${new Date().toISOString().slice(0, 10)}` +
+        `&sort[0]=date&populate=play.cover,play.director`;
 
       try {
         const [itemsResponse, newsResponse] = await Promise.all([
