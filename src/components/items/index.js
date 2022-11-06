@@ -2,11 +2,17 @@ import React from "react";
 
 import styles from "./item.module.scss";
 
-export default function Item({ item }) {
+export default function Item({ item, position }) {
   const date = new Date(item.attributes.date);
   return (
     <>
-      <div className={styles.mainBlock}>
+      <div
+        className={styles.mainBlock}
+        style={{
+          left: `${169 + 282 * position}px`,
+          opacity: position >= 0 && position < 4 ? 1 : 0,
+        }}
+      >
         <img
           className={styles.cardImg}
           src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
@@ -34,4 +40,3 @@ export default function Item({ item }) {
     </>
   );
 }
-

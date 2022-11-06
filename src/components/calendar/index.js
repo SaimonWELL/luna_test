@@ -91,15 +91,15 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
         />
       </div>
       <div className={styles.cardsContainer}>
-        {items
-          .filter(
+        {(() => {
+          const hidden = items.filter(
             (item) =>
-              new Date(item.attributes.date).getTime() >= selected.getTime()
-          )
-          .slice(0, 4)
-          .map((item, i) => (
-            <Item key={i} item={item} />
-          ))}
+              new Date(item.attributes.date).getTime() < selected.getTime()
+          ).length;
+          return items.map((item, i) => (
+            <Item key={i} item={item} position={i - hidden} />
+          ));
+        })()}
       </div>
     </>
   );
