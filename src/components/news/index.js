@@ -4,6 +4,29 @@ import styles from "./news.module.scss";
 
 const API_URL = "http://theatre.restomatik.ru:1337";
 
+function cutToLength(s, l) {
+  const words = s.split(" ");
+  let i = 1;
+
+  console.log(words);
+
+  while (words.slice(0, i).join(" ").length < l) {
+    i += 1;
+
+    if (i > words.length) {
+      break;
+    }
+  }
+
+  const res = words.slice(0, i - 1).join(" ");
+
+  if (res.length < s.length) {
+    return res + "...";
+  } else {
+    return s;
+  }
+}
+
 export default function News({ itemsNews, setItemsNews }) {
   console.log(itemsNews);
   const news = React.useMemo(() => {
@@ -43,9 +66,15 @@ export default function News({ itemsNews, setItemsNews }) {
               alt=""
             />
             <div className={styles.date}>{item.attributes.date_str}</div>
-            <div className={styles.title}>{item.attributes.title}</div>
+            <div className={styles.title}>
+              {i === 0
+                ? item.attributes.title
+                : cutToLength(item.attributes.title, 40)}
+            </div>
             {i === 0 ? (
-              <div className={styles.text}>{item.attributes.text}</div>
+              <div className={styles.text}>
+                {cutToLength(item.attributes.text, 120)}
+              </div>
             ) : null}
           </a>
         ))}
