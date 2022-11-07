@@ -68,7 +68,7 @@ function App() {
           )}
         </section>
         <section>
-          <News itemsNews={itemsNews} />
+          <News itemsNews={itemsNews} setItemsNews={setItemsNews} />
           <Form />
         </section>
       </main>

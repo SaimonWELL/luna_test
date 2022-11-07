@@ -4,7 +4,7 @@ import styles from "./news.module.scss";
 
 const API_URL = "http://theatre.restomatik.ru:1337";
 
-export default function News({ itemsNews }) {
+export default function News({ itemsNews, setItemsNews }) {
   console.log(itemsNews);
   const news = React.useMemo(() => {
     const res = itemsNews.map((item) => ({ item, style: styles.smallNews }));
@@ -13,6 +13,16 @@ export default function News({ itemsNews }) {
     }
     return res;
   }, [itemsNews]);
+
+  function scrollNews(d) {
+    setItemsNews((items) =>
+      Array.from(
+        { length: items.length },
+        (_, i) => items[(i + d + items.length) % items.length]
+      )
+    );
+  }
+
   return (
     <>
       <div className={styles.header}>
@@ -35,12 +45,14 @@ export default function News({ itemsNews }) {
             <div className={styles.date}>{item.attributes.date_str}</div>
             <div className={styles.title}>{item.attributes.title}</div>
             {i === 0 ? (
-              <div className={styles.text}>
-                {item.attributes.text.repeat(10)}
-              </div>
+              <div className={styles.text}>{item.attributes.text}</div>
             ) : null}
           </a>
         ))}
+      </div>
+      <div className={styles.arrowsContainer}>
+        <img src="/img/newsLarr.png" alt="" onClick={() => scrollNews(-1)} />
+        <img src="/img/newsRarr.png" alt="" onClick={() => scrollNews(1)} />
       </div>
     </>
   );

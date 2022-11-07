@@ -123,13 +123,15 @@
     .title {
       @extend .titleBase;
 
-      font-size: 16px;
+      font-size: 14px;
       padding-left: 20px;
       padding-right: 20px;
     }
 
     .date {
       @extend .dateBase;
+
+      font-size: 12px;
 
       padding-left: 20px;
       padding-right: 20px;
@@ -160,4 +162,16 @@
 .cover {
   width: 100%;
   object-fit: cover;
+}
+
+.arrowsContainer {
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  cursor: pointer;
 }
