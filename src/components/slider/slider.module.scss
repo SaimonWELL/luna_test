@@ -155,14 +155,15 @@
   flex-direction: row;
   justify-content: space-between;
   h1 {
-    font-family: "Source Sans Pro", sans-serif;
+    margin-left: 50px;
+
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
     font-size: 59px;
     line-height: 66px;
 
-    text-transform: uppercase;
-    color: #af960c;
+    color: white;
   }
   .buttons {
     display: flex;
