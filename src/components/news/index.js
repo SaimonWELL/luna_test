@@ -8,8 +8,6 @@ function cutToLength(s, l) {
   const words = s.split(" ");
   let i = 1;
 
-  console.log(words);
-
   while (words.slice(0, i).join(" ").length < l) {
     i += 1;
 
@@ -28,7 +26,6 @@ function cutToLength(s, l) {
 }
 
 export default function News({ itemsNews, setItemsNews }) {
-  console.log(itemsNews);
   const news = React.useMemo(() => {
     const res = itemsNews.map((item) => ({ item, style: styles.smallNews }));
     if (res.length > 0) {

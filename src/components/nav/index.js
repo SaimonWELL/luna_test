@@ -19,6 +19,15 @@ function Nav() {
           <li className={styles.menuItemL}>
             <a href="http://www.lunatheatre.ru/pages/o-lune">театр</a>
           </li>
+          <li className={styles.menuItemL}>
+            <a href="http://www.lunatheatre.ru/news">Новости</a>
+          </li>
+          <li className={styles.menuItemL}>
+            <a href="http://www.lunatheatre.ru/smi">Пресса</a>
+          </li>
+          <li className={styles.menuItemL}>
+            <a href="http://www.lunatheatre.ru/pages/kontakty">Контакты</a>
+          </li>
         </ul>
         <div className={styles.logo}>
           <a href="#">
@@ -39,17 +48,6 @@ function Nav() {
             />
           </a>
         </div>
-        <ul className={styles.rightMenu}>
-          <li className={styles.menuItemR}>
-            <a href="http://www.lunatheatre.ru/news">Новости</a>
-          </li>
-          <li className={styles.menuItemR}>
-            <a href="http://www.lunatheatre.ru/smi">Пресса</a>
-          </li>
-          <li className={styles.menuItemR}>
-            <a href="http://www.lunatheatre.ru/pages/kontakty">Контакты</a>
-          </li>
-        </ul>
       </nav>
     </div>
   );
