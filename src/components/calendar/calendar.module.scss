@@ -130,11 +130,13 @@ $wk-font-size: 20px;
   position: absolute;
   left: 0;
   top: 950px;
+  z-index: 1;
 }
 .curRight {
   position: absolute;
   right: 0;
   top: 950px;
+  z-index: 1;
 }
 
 .rarr,
