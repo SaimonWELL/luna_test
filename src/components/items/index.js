@@ -34,7 +34,7 @@ export default function Item({ item, position }) {
           </div>
         </div>
         <a href={item.attributes.tickets_link} className={styles.buy}>
-          <p>Купить </p>
+          <p>Билеты</p>
         </a>
       </div>
     </>

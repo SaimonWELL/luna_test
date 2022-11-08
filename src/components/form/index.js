@@ -8,7 +8,7 @@ export default function Form() {
   return (
     <div className={styles.block_form}>
       <div className={styles.block}>
-        <h2>Следи за жизнью театра в Telegram</h2>
+        <h2>Следите за жизнью театра в Telegram</h2>
         <form action="URL">
           <img
             src="/img/tg.svg"
@@ -23,4 +23,3 @@ export default function Form() {
     </div>
   );
 }
-

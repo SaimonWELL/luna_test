@@ -21,7 +21,7 @@ function App() {
       const apiUrl2 =
         "http://theatre.restomatik.ru:1337/api/articles" +
         "?sort[0]=publishedAt%3Adesc&populate=cover" +
-        "&pagination[pageSize]=5";
+        "&pagination[pageSize]=4";
       const apiUrl =
         `http://theatre.restomatik.ru:1337/api/shows` +
         `?filters[date][$gt]=${new Date().toISOString().slice(0, 10)}` +

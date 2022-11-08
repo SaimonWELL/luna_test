@@ -41,8 +41,12 @@
   }
 }
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
   width: 100%;
-  height: 65px;
+  height: 90px;
 
   border-top: 3px solid #262645;
   background-color: #111129;
@@ -50,6 +54,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  box-shadow: 0px 3px 0px #000000;;
   ul {
     display: flex;
     list-style: none;
@@ -81,18 +86,19 @@ nav {
     }
   }
   .logo {
-    scale: 1.8;
+    scale: 2.0;
     position: relative;
-    width: 252.63px;
-    height: 254px;
-    bottom: 80px;
+    width: 288.67px;
+    height: 299px;
+    right: -1.5%;
+    bottom: 50px;
     background: url("./back-logo.png") no-repeat -5px -2px,
       url("./back_elipse.png") no-repeat 60px 10px;
 
     .test {
       position: relative;
-      top: 2%;
-      left: 25%;
+      top: 2.5%;
+      left: 22%;
     }
 
     .test:hover {
@@ -117,9 +123,11 @@ nav {
       }
     }
     .text_logo {
+    width: 145px;
+    height: 95px;
       position: relative;
-      bottom: 5%;
-      right: 50%;
+      bottom: 3.8%;
+      right: 48.4%;
     }
   }
 }

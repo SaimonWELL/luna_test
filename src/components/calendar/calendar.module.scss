@@ -85,12 +85,12 @@ $wk-font-size: 20px;
 }
 
 .dateContainer > .dateNum {
-  color: #96947c;
+  color: #975b5b;
 }
 
 .dateContainerHover > .dateNum,
 .dateContainerSelected > .dateNum {
-  color: white;
+  color: #eeeeee;
 }
 
 .dateContainer,
@@ -129,13 +129,13 @@ $wk-font-size: 20px;
 .curLeft {
   position: absolute;
   left: 0;
-  top: 1068px;
+  top: 1093px;
   z-index: 1;
 }
 .curRight {
   position: absolute;
   right: 0;
-  top: 1068px;
+  top: 1093px;
   z-index: 1;
 }
 
