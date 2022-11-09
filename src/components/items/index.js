@@ -2,6 +2,10 @@ import React from "react";
 
 import styles from "./item.module.scss";
 
+const ITEM_WIDTH = 15;
+const MARGIN = 2;
+const LEFT_MARGIN = (100 - 4 * ITEM_WIDTH - 3 * MARGIN) / 2;
+
 export default function Item({ item, position }) {
   const date = new Date(item.attributes.date);
   return (
@@ -9,14 +13,18 @@ export default function Item({ item, position }) {
       <div
         className={styles.mainBlock}
         style={{
-          left: `${169 + 282 * position}px`,
+          left: `${LEFT_MARGIN + (ITEM_WIDTH + MARGIN) * position}vw`,
           opacity: position >= 0 && position < 4 ? 1 : 0,
+          width: `${ITEM_WIDTH}vw`,
         }}
       >
         <img
           className={styles.cardImg}
           src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
           alt=""
+          style={{
+            width: `${ITEM_WIDTH}vw`,
+          }}
         />
         <h2 className={styles.title}>
           {item.attributes.play.data.attributes.title}
@@ -34,7 +42,7 @@ export default function Item({ item, position }) {
           </div>
         </div>
         <a href={item.attributes.tickets_link} className={styles.buy}>
-          <p>Купить </p>
+          <p>Билеты</p>
         </a>
       </div>
     </>

@@ -4,15 +4,11 @@
 .mainBlock {
   position: absolute;
 
-  width: 252px;
   height: 490px;
   display: flex;
   flex-direction: column;
   background: #262645;
   padding: 0;
-
-  margin-left: 15px;
-  margin-right: 15px;
 
   box-shadow: 0px 0px 20px;
 
@@ -25,7 +21,6 @@
 }
 
 .cardImg {
-  width: 252px;
   height: 262px;
   object-fit: cover;
 }
@@ -76,10 +71,12 @@
       font-size: 16.1039px;
       line-height: 15px;
 
-      margin-left: 12px;
+      margin-left: 0.5vw;
       text-align: center;
-      height: 39px;
-      width: 117px;
+      width: 8vw;
+
+      padding-top: 4px;
+      padding-bottom: 3px;
 
       color: #000000;
       background: #d9d9d9;
@@ -91,19 +88,18 @@
       font-family: "Montserrat";
       font-style: normal;
       font-weight: 400;
-      font-size: 42.6186px;
+      font-size: 30px;
       position: relative;
-      top: 17px;
+      top: 30px;
 
       color: #ffffff;
-      margin-left: 12.5px;
-      padding-top: 50px;
+      margin-left: 0.5vw;
     }
 
     hr {
       height: 8px;
       background: #d9d9d9;
-      margin-top: 25px;
+      margin-top: 38px;
     }
   }
 }
@@ -111,6 +107,7 @@
 .buy {
   height: 53px;
   background: #690714;
+  text-transform: uppercase;
 
   p {
     font-family: "Montserrat";
