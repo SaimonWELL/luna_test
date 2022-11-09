@@ -148,19 +148,20 @@
   z-index: 2;
   position: relative;
   top: 250px;
-  margin-left: 168px;
-  margin-right: 164px;
-  max-width: 100%;
+  // margin-left: 168px;
+  // margin-right: 164px;
+  // max-width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   h1 {
-    margin-left: 50px;
+    margin-left: 13vw;
 
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 600;
-    font-size: 59px;
+    font-weight: 500;
+    font-size: 50px;
     line-height: 66px;
 
     color: white;
@@ -168,11 +169,13 @@
   .buttons {
     display: flex;
     flex-direction: row;
+    margin-right: 13vw;
+
     .post {
       background: #8b1313;
       margin-right: 14px;
-      height: 54px;
-      width: 150px;
+      height: 50px;
+      width: 130px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -189,8 +192,8 @@
       }
     }
     .allPost {
-      width: 185px;
-      height: 50px;
+      width: 165px;
+      height: 46px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -199,7 +202,7 @@
         font-family: "Montserrat";
         font-style: normal;
         font-weight: 400;
-        font-size: 21.0292px;
+        font-size: 19px;
         line-height: 45px;
 
         color: #e6c714;

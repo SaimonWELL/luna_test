@@ -1,16 +1,16 @@
-$strip-height: 40px;
+$strip-height: 33px;
 
-$date-width: 33px;
-$date-margin: 18px;
+$date-width: 2.5vw;
+$date-margin: 0.9vw;
 
-$ndate-width: 50px;
+$ndate-width: 3.2vw;
 $ndate-height: 60px;
 
-$moon-size: 65px;
+$moon-size: 67px;
 
 $reg-font-size: 30px;
 $sel-font-size: 40px;
-$wk-font-size: 20px;
+$wk-font-size: 23px;
 
 .datesStrip {
   width: 100%;
@@ -81,7 +81,9 @@ $wk-font-size: 20px;
   flex-direction: column;
   justify-content: center;
 
-  transition: font-size 0.1s, width 0.1s, height 0.1s;
+  margin-left: -0.1vw;
+
+  transition: font-size 0.1s, width 0.1s, height 0.1s, font-weight 0.1s;
 }
 
 .dateContainer > .dateNum {
@@ -100,6 +102,7 @@ $wk-font-size: 20px;
 
 .dateContainerHover:hover > .dateNum,
 .dateContainerSelected > .dateNum {
+  font-weight: 450;
   font-size: $sel-font-size;
   width: $ndate-width;
   height: $ndate-height;
@@ -141,7 +144,8 @@ $wk-font-size: 20px;
 
 .rarr,
 .larr {
-  height: 25px;
+  margin-top: calc(2.2 * $strip-height);
+  height: 23px;
   cursor: pointer;
 }
 
