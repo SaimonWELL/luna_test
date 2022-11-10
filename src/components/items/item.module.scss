@@ -14,10 +14,12 @@
 
   transition: left 0.5s, opacity 0.3s, box-shadow 0.1s;
   z-index: 0;
+  transition: all .2s ease-in-out;
 }
 
 .mainBlock:hover {
   box-shadow: 0px 0px 20px #0094ff;
+  transform: scale(1.05); 
 }
 
 .cardImg {
@@ -34,10 +36,10 @@
   text-align: center;
 
   color: #ffffff;
-  padding-top: 8px;
-  padding-bottom: 13px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 
-  height: 81px;
+  height: 75px;
 }
 
 .datePlace {
