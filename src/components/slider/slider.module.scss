@@ -19,12 +19,13 @@
   justify-content: space-between;
 
   position: relative;
-  width: 1108px;
+  // width: 100vw;
   height: 188px;
-  left: 169px;
+
+  padding-left: 12.5vw;
+  padding-right: 13vw;
   top: 350px;
   .block1 {
-    margin-left: 50px;
     justify-content: flex-end;
     display: flex;
     flex-direction: column;
@@ -76,14 +77,11 @@
     }
   }
   .block2 {
-    position: absolute;
-    margin-left: 116vh;
     justify-content: center;
     display: flex;
     flex-direction: column;
 
     height: 188px;
-    width: 150px;
     background: #262645;
     padding: 0 10px;
 
@@ -146,6 +144,7 @@
 }
 
 .startCalendarText {
+  z-index: 2;
   position: relative;
   top: 250px;
   // margin-left: 168px;
@@ -158,13 +157,13 @@
   h1 {
     margin-left: 13vw;
 
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
     font-size: 50px;
     line-height: 66px;
 
-    color: #af960c;
+    color: white;
   }
   .buttons {
     display: flex;
