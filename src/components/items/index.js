@@ -39,14 +39,19 @@ export default function Item({ item, position }) {
           "--place-text-color": place.text_color,
         }}
       >
-        <img
-          className={styles.cardImg}
-          src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
-          alt=""
-          style={{
-            width: `${ITEM_WIDTH}vw`,
-          }}
-        />
+        <a
+          href={`http://theatre.restomatik.ru:1337/play/${item.id}`}
+          className={styles.imgLink}
+        >
+          <img
+            className={styles.cardImg}
+            src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
+            alt=""
+            style={{
+              width: `${ITEM_WIDTH}vw`,
+            }}
+          />
+        </a>
         <h2 className={styles.title}>
           {item.attributes.play.data.attributes.title}
         </h2>

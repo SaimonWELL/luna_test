@@ -22,8 +22,12 @@
   transform: scale(1.05);
 }
 
-.cardImg {
+.imgLink {
   height: 262px;
+}
+
+.cardImg {
+  height: 240px;
   object-fit: cover;
 }
 
