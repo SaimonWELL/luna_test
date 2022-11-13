@@ -3,6 +3,7 @@ import Item from "../../components/items";
 
 import styles from "./calendar.module.scss";
 
+const ARR_OFFSET = 7;
 const DAY = 1000 * 60 * 60 * 24;
 
 export default function Calendar({ firstDate, setFirstDate, items }) {
@@ -70,7 +71,7 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           alt="<"
           className={styles.larr}
           onClick={() => {
-            moveDate(-2);
+            moveDate(-ARR_OFFSET);
           }}
         />
         {dates.map(({ date, free }) => (
@@ -86,7 +87,7 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           alt=">"
           className={styles.rarr}
           onClick={() => {
-            moveDate(2);
+            moveDate(ARR_OFFSET);
           }}
         />
       </div>
