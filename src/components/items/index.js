@@ -6,8 +6,27 @@ const ITEM_WIDTH = 15;
 const MARGIN = 2;
 const LEFT_MARGIN = (100 - 4 * ITEM_WIDTH - 3 * MARGIN) / 2;
 
+const PLACES = {
+  "Малый зал": {
+    name: "малая сцена",
+    color: "#f0eab0",
+    text_color: "#000000",
+  },
+  "Большой зал": {
+    name: "основная сцена",
+    color: "#d9d9d9",
+    text_color: "#000000",
+  },
+  'Зал "Маленькая Луна"': {
+    name: "маленькая луна",
+    color: "#5f96b9",
+    text_color: "#ffffff",
+  },
+};
+
 export default function Item({ item, position }) {
   const date = new Date(item.attributes.date);
+  const place = PLACES[item.attributes.place];
   return (
     <>
       <div
@@ -16,6 +35,8 @@ export default function Item({ item, position }) {
           left: `${LEFT_MARGIN + (ITEM_WIDTH + MARGIN) * position}vw`,
           opacity: position >= 0 && position < 4 ? 1 : 0,
           width: `${ITEM_WIDTH}vw`,
+          "--place-color": place.color,
+          "--place-text-color": place.text_color,
         }}
       >
         <img
@@ -34,7 +55,7 @@ export default function Item({ item, position }) {
             <span className={styles.number}>
               /{date.getDate()}.{date.getMonth()}
             </span>
-            <span className={styles.place}>основная сцена</span>
+            <span className={styles.place}>{place.name}</span>
           </div>
           <div className={styles.time}>
             <span>{item.attributes.time.slice(0, 5)}</span>

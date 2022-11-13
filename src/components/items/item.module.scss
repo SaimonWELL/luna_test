@@ -14,12 +14,12 @@
 
   transition: left 0.5s, opacity 0.3s, box-shadow 0.1s;
   z-index: 0;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .mainBlock:hover {
   box-shadow: 0px 0px 20px #0094ff;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .cardImg {
@@ -73,6 +73,8 @@
       font-size: 16.1039px;
       line-height: 15px;
 
+      height: 30px;
+
       margin-left: 0.5vw;
       text-align: center;
       width: 8vw;
@@ -80,8 +82,8 @@
       padding-top: 4px;
       padding-bottom: 3px;
 
-      color: #000000;
-      background: #d9d9d9;
+      color: var(--place-text-color);
+      background: var(--place-color);
     }
   }
 
@@ -100,7 +102,7 @@
 
     hr {
       height: 8px;
-      background: #d9d9d9;
+      background: var(--place-color);
       margin-top: 38px;
     }
   }
