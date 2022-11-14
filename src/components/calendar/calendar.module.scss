@@ -1,7 +1,7 @@
 $strip-height: 33px;
 
-$date-width: 2.5vw;
-$date-margin: 0.9vw;
+$date-width: var(--date-width);
+// $date-margin: 0.9vw;
 
 $ndate-width: 3.2vw;
 $ndate-height: 60px;
@@ -27,10 +27,12 @@ $wk-font-size: 23px;
 }
 
 .dateBtnContainer {
+  position: absolute;
+
   height: $strip-height;
   width: $date-width;
-  margin-left: $date-margin;
-  margin-right: $date-margin;
+  // margin-left: $date-margin;
+  // margin-right: $date-margin;
 
   img {
     position: absolute;
@@ -145,6 +147,7 @@ $wk-font-size: 23px;
 
 .rarr,
 .larr {
+  position: absolute;
   margin-top: calc(2.2 * $strip-height);
   height: 23px;
   cursor: pointer;
