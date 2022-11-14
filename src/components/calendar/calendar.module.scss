@@ -34,6 +34,10 @@ $wk-font-size: 23px;
   // margin-left: $date-margin;
   // margin-right: $date-margin;
 
+  // transition: left 1s;
+  transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  z-index: 1;
+
   img {
     position: absolute;
     z-index: 2;
@@ -132,17 +136,18 @@ $wk-font-size: 23px;
   height: 490px;
 }
 
-.curLeft {
-  position: absolute;
-  left: 0;
-  top: 1093px;
-  z-index: 1;
-}
+.curLeft,
 .curRight {
   position: absolute;
-  right: 0;
+  z-index: 10;
   top: 1093px;
-  z-index: 1;
+}
+
+.curLeft {
+  left: 0;
+}
+.curRight {
+  right: 0;
 }
 
 .rarr,

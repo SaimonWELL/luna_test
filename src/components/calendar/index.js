@@ -14,48 +14,29 @@ const CALENDAR_WIDTH =
   DATE_NUMBER * DATE_WIDTH + (DATE_NUMBER - 1) * DATE_MARGIN;
 const DATE_LEFT_MARGIN = (100 - CALENDAR_WIDTH) / 2;
 
-export default function Calendar({ firstDate, setFirstDate, items }) {
-  const [selected, setSelected] = React.useState(() => {
-    const date = new Date();
-    date.setTime(firstDate.getTime() + 2 * DAY);
-    return date;
-  });
-
-  const dates = React.useMemo(() => {
-    return Array.from({ length: DATE_NUMBER }, (_, i) => {
-      const date = new Date();
-      date.setTime(firstDate.getTime() + i * DAY);
-      return {
-        date: date,
-        free: !items.some((item) => {
-          const itemdate = new Date(item.attributes.date);
-          return itemdate.getTime() === date.getTime();
-        }),
-      };
-    });
-  }, [firstDate, items]);
-
-  function DateBtn({ date, selected, free, position }) {
-    const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
-    return (
+function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
+  const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+  return (
+    <>
       <div
         className={styles.dateBtnContainer}
         style={{
           left: `${DATE_LEFT_MARGIN + position * (DATE_WIDTH + DATE_MARGIN)}vw`,
           "--date-width": `${DATE_WIDTH}vw`,
+          opacity: position >= 0 && position < DATE_NUMBER ? 1 : 0,
         }}
       >
-        {selected ? <img src="/img/calendar_luna.svg" alt="" /> : null}
+        {isselected ? <img src="/img/calendar_luna.svg" alt="" /> : null}
         <div
           className={
-            selected
+            isselected
               ? styles.dateContainerSelected
               : free
               ? styles.dateContainer
               : [styles.dateContainer, styles.dateContainerHover].join(" ")
           }
           onClick={() => {
-            if (!selected && !free) {
+            if (!isselected && !free) {
               setSelected(date);
             }
           }}
@@ -64,14 +45,44 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           <div className={styles.weekDay}>{week[date.getDay()]}</div>
         </div>
       </div>
-    );
-  }
+    </>
+  );
+}
+
+export default function Calendar({ firstDate, setFirstDate, items }) {
+  const [selected, setSelected] = React.useState(() => {
+    const date = new Date();
+    date.setTime(firstDate.getTime() + 2 * DAY);
+    return date;
+  });
+
+  const dates = React.useMemo(() => {
+    console.log("calc");
+    const today = new Date(new Date().toISOString().slice(0, 10));
+    return Array.from({ length: DATE_NUMBER + 20 * ARR_OFFSET }, (_, i) => {
+      const date = new Date();
+      date.setTime(today.getTime() + (i - ARR_OFFSET) * DAY);
+      return {
+        date: date,
+        free: !items.some((item) => {
+          const itemdate = new Date(item.attributes.date);
+          return itemdate.getTime() === date.getTime();
+        }),
+      };
+    });
+  }, [items]);
 
   function moveDate(days) {
     setFirstDate((prev) => {
-      const d = new Date();
-      d.setTime(prev.getTime() + days * DAY);
-      return d;
+      const time = prev.getTime() + days * DAY;
+
+      if (time >= dates[0].date.getTime()) {
+        const d = new Date();
+        d.setTime(time);
+        return d;
+      } else {
+        return prev;
+      }
     });
   }
 
@@ -91,15 +102,17 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
             right: `${CALENDAR_WIDTH + DATE_LEFT_MARGIN}vw`,
           }}
         />
-        {dates.map(({ date, free }, i) => (
-          <DateBtn
-            key={date.getTime()}
-            date={date}
-            selected={selected.getTime() === date.getTime()}
-            free={free}
-            position={i}
-          />
-        ))}
+        {(() => {
+          return dates.map((date, i) => (
+            <DateBtn
+              key={i}
+              date={date}
+              isselected={date.date.getTime() === selected.getTime()}
+              setSelected={setSelected}
+              position={(date.date.getTime() - firstDate.getTime()) / DAY}
+            />
+          ));
+        })()}
         <img
           src="/img/rarr.png"
           alt=">"
