@@ -103,7 +103,7 @@ $wk-font-size: 23px;
 
 .dateContainer,
 .dateContainerSelected {
-  cursor: pointer;
+  cursor: var(--cursor);
 }
 
 .dateContainerHover:hover > .dateNum,
@@ -139,7 +139,7 @@ $wk-font-size: 23px;
 .curLeft,
 .curRight {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   top: 1093px;
 }
 

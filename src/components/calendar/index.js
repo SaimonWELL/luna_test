@@ -16,6 +16,7 @@ const DATE_LEFT_MARGIN = (100 - CALENDAR_WIDTH) / 2;
 
 function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
   const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+  const inview = position >= 0 && position < DATE_NUMBER;
   return (
     <>
       <div
@@ -23,7 +24,11 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
         style={{
           left: `${DATE_LEFT_MARGIN + position * (DATE_WIDTH + DATE_MARGIN)}vw`,
           "--date-width": `${DATE_WIDTH}vw`,
-          opacity: position >= 0 && position < DATE_NUMBER ? 1 : 0,
+          opacity: inview ? 1 : 0,
+          ...(position >= -ARR_OFFSET && position < DATE_NUMBER + ARR_OFFSET
+            ? {}
+            : { display: "none" }),
+          "--cursor": inview ? "pointer" : "default",
         }}
       >
         {isselected ? <img src="/img/calendar_luna.svg" alt="" /> : null}
@@ -36,7 +41,12 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
               : [styles.dateContainer, styles.dateContainerHover].join(" ")
           }
           onClick={() => {
-            if (!isselected && !free) {
+            if (
+              !isselected &&
+              !free &&
+              position >= 0 &&
+              position < DATE_NUMBER
+            ) {
               setSelected(date);
             }
           }}
