@@ -6,10 +6,10 @@ $date-width: var(--date-width);
 $ndate-width: 3.2vw;
 $ndate-height: 60px;
 
-$moon-size: 67px;
+$moon-size: 60px;
 
 $reg-font-size: 30px;
-$sel-font-size: 40px;
+$sel-font-size: 37px;
 $wk-font-size: 23px;
 
 .datesStrip {
@@ -26,7 +26,9 @@ $wk-font-size: 23px;
   margin-bottom: 80px;
 }
 
-.dateBtnContainer {
+.dateBtnContainer,
+.dateBtnContainerSelected,
+.dateBtnContainerHover {
   position: absolute;
 
   height: $strip-height;
@@ -41,12 +43,25 @@ $wk-font-size: 23px;
   img {
     position: absolute;
     z-index: 2;
+    scale: 0;
 
     height: $moon-size;
     width: $moon-size;
     margin-top: calc(0px - ($moon-size - $strip-height) / 2);
     margin-left: calc(2px - ($moon-size - $date-width) / 2);
+
+    transition: scale 0.1s ease-in-out;
   }
+}
+
+.dateBtnContainerHover:hover > img,
+.dateBtnContainerSelected > img {
+  scale: 1;
+}
+
+.dateBtnContainerHover:hover > img,
+.dateBtnContainerSelected:hover > img {
+  filter: drop-shadow(0px 0px 5px #0094ff);
 }
 
 .dateContainer {
@@ -55,7 +70,6 @@ $wk-font-size: 23px;
 
   width: $date-width;
   height: $strip-height;
-  background: #690714;
 
   transition: width 0.1s, height 0.1s, margin-top 0.1s, margin-left 0.1s,
     box-shadow 0.1s;
@@ -63,8 +77,6 @@ $wk-font-size: 23px;
 
 .dateContainerHover:hover {
   @extend .dateContainerSelected;
-
-  box-shadow: 0px 0px 10px black;
 }
 
 .dateContainerSelected {

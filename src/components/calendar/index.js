@@ -20,7 +20,13 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
   return (
     <>
       <div
-        className={styles.dateBtnContainer}
+        className={
+          isselected
+            ? styles.dateBtnContainerSelected
+            : free
+            ? styles.dateBtnContainer
+            : styles.dateBtnContainerHover
+        }
         style={{
           left: `${DATE_LEFT_MARGIN + position * (DATE_WIDTH + DATE_MARGIN)}vw`,
           "--date-width": `${DATE_WIDTH}vw`,
@@ -31,7 +37,7 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
           "--cursor": inview ? "pointer" : "default",
         }}
       >
-        {isselected ? <img src="/img/calendar_luna.svg" alt="" /> : null}
+        <img src="/img/calendar_luna.svg" alt="" />
         <div
           className={
             isselected
