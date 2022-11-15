@@ -10,13 +10,17 @@ const DATE_WIDTH = 2.5;
 const DATE_MARGIN = 1.8;
 const DATE_NUMBER = 15;
 
+const WINDOW_OFFSET = 0.8;
+
+const DATE_LOAD_LENGTH = DATE_NUMBER + 20 * ARR_OFFSET;
 const CALENDAR_WIDTH =
   DATE_NUMBER * DATE_WIDTH + (DATE_NUMBER - 1) * DATE_MARGIN;
+const SLIDER_WIDTH =
+  DATE_LOAD_LENGTH * DATE_WIDTH + (DATE_LOAD_LENGTH - 1) * DATE_MARGIN;
 const DATE_LEFT_MARGIN = (100 - CALENDAR_WIDTH) / 2;
 
-function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
+function DateBtn({ date: { date, free }, isselected, setSelected }) {
   const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
-  const inview = position >= 0 && position < DATE_NUMBER;
   return (
     <>
       <div
@@ -28,13 +32,7 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
             : styles.dateBtnContainerHover
         }
         style={{
-          left: `${DATE_LEFT_MARGIN + position * (DATE_WIDTH + DATE_MARGIN)}vw`,
           "--date-width": `${DATE_WIDTH}vw`,
-          opacity: inview ? 1 : 0,
-          ...(position >= -ARR_OFFSET && position < DATE_NUMBER + ARR_OFFSET
-            ? {}
-            : { display: "none" }),
-          "--cursor": inview ? "pointer" : "default",
         }}
       >
         <img src="/img/calendar_luna.svg" alt="" />
@@ -47,14 +45,7 @@ function DateBtn({ date: { date, free }, isselected, setSelected, position }) {
               : [styles.dateContainer, styles.dateContainerHover].join(" ")
           }
           onClick={() => {
-            if (
-              !isselected &&
-              !free &&
-              position >= 0 &&
-              position < DATE_NUMBER
-            ) {
-              setSelected(date);
-            }
+            setSelected(date);
           }}
         >
           <div className={styles.dateNum}>{date.getDate()}</div>
@@ -75,7 +66,7 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
   const dates = React.useMemo(() => {
     console.log("calc");
     const today = new Date(new Date().toISOString().slice(0, 10));
-    return Array.from({ length: DATE_NUMBER + 20 * ARR_OFFSET }, (_, i) => {
+    return Array.from({ length: DATE_LOAD_LENGTH }, (_, i) => {
       const date = new Date();
       date.setTime(today.getTime() + (i - ARR_OFFSET) * DAY);
       return {
@@ -118,17 +109,36 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
             right: `${CALENDAR_WIDTH + DATE_LEFT_MARGIN}vw`,
           }}
         />
-        {(() => {
-          return dates.map((date, i) => (
-            <DateBtn
-              key={i}
-              date={date}
-              isselected={date.date.getTime() === selected.getTime()}
-              setSelected={setSelected}
-              position={(date.date.getTime() - firstDate.getTime()) / DAY}
-            />
-          ));
-        })()}
+        <div
+          className={styles.dateWindow}
+          style={{
+            width: `${CALENDAR_WIDTH + 2 * WINDOW_OFFSET}vw`,
+            "margin-left": `${DATE_LEFT_MARGIN - WINDOW_OFFSET}vw`,
+            "padding-left": `${WINDOW_OFFSET}vw`,
+          }}
+        >
+          <div
+            className={styles.dateSlider}
+            style={{
+              width: `${SLIDER_WIDTH}vw`,
+              left: `-${
+                ((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
+                (DATE_WIDTH + DATE_MARGIN)
+              }vw`,
+            }}
+          >
+            {(() => {
+              return dates.map((date, i) => (
+                <DateBtn
+                  key={i}
+                  date={date}
+                  isselected={date.date.getTime() === selected.getTime()}
+                  setSelected={setSelected}
+                />
+              ));
+            })()}
+          </div>
+        </div>
         <img
           src="/img/rarr.png"
           alt=">"

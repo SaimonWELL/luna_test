@@ -20,17 +20,31 @@ $wk-font-size: 23px;
   display: flex;
   flex-direction: row;
 
-  align-items: center;
-  place-content: center;
+  // align-items: center;
+  // place-content: center;
 
   margin-bottom: 80px;
+}
+
+.dateWindow {
+  padding-top: 20px;
+  margin-top: -20px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.dateSlider {
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
+  position: relative;
+
+  transition: left 0.2s ease;
 }
 
 .dateBtnContainer,
 .dateBtnContainerSelected,
 .dateBtnContainerHover {
-  position: absolute;
-
   height: $strip-height;
   width: $date-width;
   // margin-left: $date-margin;
