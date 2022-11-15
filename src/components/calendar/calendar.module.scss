@@ -78,7 +78,12 @@ $wk-font-size: 23px;
   filter: drop-shadow(0px 0px 5px #0094ff);
 }
 
+// .dateContainer : .dateBtnContainer > .dateContainer
+// .dateContainerSelected : .dateBtnContainerSelected > .dateContainer
+// .dateContainerHover : .dateBtnContainerHover > .dateContainer
+
 .dateContainer {
+  // pointer-events: none;
   position: absolute;
   z-index: 1;
 
@@ -89,11 +94,8 @@ $wk-font-size: 23px;
     box-shadow 0.1s;
 }
 
-.dateContainerHover:hover {
-  @extend .dateContainerSelected;
-}
-
-.dateContainerSelected {
+.dateBtnContainerHover:hover > .dateContainer,
+.dateBtnContainerSelected > .dateContainer {
   position: absolute;
   z-index: 2;
 
@@ -118,22 +120,22 @@ $wk-font-size: 23px;
   transition: font-size 0.1s, width 0.1s, height 0.1s, font-weight 0.1s;
 }
 
-.dateContainer > .dateNum {
+.dateBtnContainer > .dateContainer > .dateNum {
   color: #975b5b;
 }
 
-.dateContainerHover > .dateNum,
-.dateContainerSelected > .dateNum {
+.dateBtnContainerHover > .dateContainer > .dateNum,
+.dateBtnContainerSelected > .dateContainer > .dateNum {
   color: #eeeeee;
 }
 
-.dateContainer,
-.dateContainerSelected {
+.dateBtnContainer > .dateContainer,
+.dateBtnContainerSelected > .dateContainer {
   cursor: var(--cursor);
 }
 
-.dateContainerHover:hover > .dateNum,
-.dateContainerSelected > .dateNum {
+.dateBtnContainerHover:hover > .dateContainer > .dateNum,
+.dateBtnContainerSelected > .dateContainer > .dateNum {
   font-weight: 450;
   font-size: $sel-font-size;
   width: $ndate-width;
@@ -147,6 +149,8 @@ $wk-font-size: 23px;
   font-size: $wk-font-size;
   color: white;
   text-align: center;
+
+  pointer-events: none;
 }
 
 .cardsContainer {

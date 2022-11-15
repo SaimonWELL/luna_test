@@ -37,13 +37,14 @@ function DateBtn({ date: { date, free }, isselected, setSelected }) {
       >
         <img src="/img/calendar_luna.svg" alt="" />
         <div
-          className={
-            isselected
-              ? styles.dateContainerSelected
-              : free
-              ? styles.dateContainer
-              : [styles.dateContainer, styles.dateContainerHover].join(" ")
-          }
+          // className={
+          //   isselected
+          //     ? styles.dateContainerSelected
+          //     : free
+          //     ? styles.dateContainer
+          //     : [styles.dateContainer, styles.dateContainerHover].join(" ")
+          // }
+          className={styles.dateContainer}
           onClick={() => {
             setSelected(date);
           }}
