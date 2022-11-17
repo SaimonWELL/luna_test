@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 .mainBlock {
-  height: 490px;
+  height: 35vw;
   display: flex;
   flex-direction: column;
   background: #262645;
@@ -20,11 +20,11 @@
 }
 
 .imgLink {
-  height: 262px;
+  flex: 1;
 }
 
 .cardImg {
-  height: 240px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -40,11 +40,11 @@
   padding-top: 20px;
   padding-bottom: 10px;
 
-  height: 75px;
+  height: 15%;
 }
 
 .datePlace {
-  height: 94px;
+  height: 19%;
   background: #1c1c35;
   display: flex;
   flex-direction: row;
@@ -110,7 +110,7 @@
 }
 
 .buy {
-  height: 53px;
+  height: 11%;
   background: #690714;
   text-transform: uppercase;
 
