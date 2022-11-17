@@ -2,10 +2,6 @@ import React from "react";
 
 import styles from "./item.module.scss";
 
-const ITEM_WIDTH = 15;
-const MARGIN = 2;
-const LEFT_MARGIN = (100 - 4 * ITEM_WIDTH - 3 * MARGIN) / 2;
-
 const PLACES = {
   "Малый зал": {
     name: "малая сцена",
@@ -24,7 +20,7 @@ const PLACES = {
   },
 };
 
-export default function Item({ item, position }) {
+export default function Item({ item, width }) {
   const date = new Date(item.attributes.date);
   const place = PLACES[item.attributes.place];
   return (
@@ -32,8 +28,7 @@ export default function Item({ item, position }) {
       <div
         className={styles.mainBlock}
         style={{
-          left: `${LEFT_MARGIN + (ITEM_WIDTH + MARGIN) * position}vw`,
-          width: `${ITEM_WIDTH}vw`,
+          width: `${width}vw`,
           "--place-color": place.color,
           "--place-text-color": place.text_color,
         }}
@@ -47,7 +42,7 @@ export default function Item({ item, position }) {
             src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
             alt=""
             style={{
-              width: `${ITEM_WIDTH}vw`,
+              width: `${width}vw`,
             }}
           />
         </a>
