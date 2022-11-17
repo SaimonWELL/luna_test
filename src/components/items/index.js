@@ -33,7 +33,6 @@ export default function Item({ item, position }) {
         className={styles.mainBlock}
         style={{
           left: `${LEFT_MARGIN + (ITEM_WIDTH + MARGIN) * position}vw`,
-          opacity: position >= 0 && position < 4 ? 1 : 0,
           width: `${ITEM_WIDTH}vw`,
           "--place-color": place.color,
           "--place-text-color": place.text_color,

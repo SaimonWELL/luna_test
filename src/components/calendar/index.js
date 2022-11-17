@@ -2,7 +2,6 @@ import React from "react";
 import Item from "../../components/items";
 
 import styles from "./calendar.module.scss";
-
 const ARR_OFFSET = 7;
 const DAY = 1000 * 60 * 60 * 24;
 
