@@ -4,19 +4,16 @@ import styles from "./item.module.scss";
 
 const PLACES = {
   "Малый зал": {
-    name: "малая сцена",
-    color: "#f0eab0",
-    text_color: "#000000",
+    name: "малый зал",
+    text_color: "#FEFFBB",
   },
   "Большой зал": {
-    name: "основная сцена",
-    color: "#d9d9d9",
-    text_color: "#000000",
+    name: "большой зал",
+    text_color: "#C5C5C5",
   },
   'Зал "Маленькая Луна"': {
     name: "маленькая луна",
-    color: "#5f96b9",
-    text_color: "#ffffff",
+    text_color: "#9FDDFF",
   },
 };
 
@@ -61,7 +58,16 @@ export default function Item({ item, width }) {
               {item.attributes.play.data.attributes.title}
             </div>
           </div>
-          <div className={styles.bottom}></div>
+          <div className={styles.bottom}>
+            <div
+              className={styles.place}
+              style={{
+                "--text-color": place.text_color,
+              }}
+            >
+              {place.name}
+            </div>
+          </div>
         </div>
       </div>
     </>
