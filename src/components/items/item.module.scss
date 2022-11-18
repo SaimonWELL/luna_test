@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 .mainBlock {
-  height: 33vw;
+  height: 472px;
+  width: var(--item-width);
   display: flex;
   flex-direction: column;
   background: linear-gradient(180deg, #191823 0%, #333643 6.25%, #161520 100%);
@@ -25,6 +26,7 @@
 
 .cardImg {
   height: 100%;
+  width: var(--item-width);
   object-fit: cover;
 }
 

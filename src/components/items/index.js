@@ -26,8 +26,7 @@ export default function Item({ item, width }) {
       <div
         className={styles.mainBlock}
         style={{
-          width: `${width}vw`,
-          "--item-width": `${width}vw`,
+          "--item-width": `${width}px`,
           "--place-color": place.color,
           "--place-text-color": place.text_color,
         }}
@@ -40,9 +39,6 @@ export default function Item({ item, width }) {
             className={styles.cardImg}
             src={`http://theatre.restomatik.ru:1337${item.attributes.play.data.attributes.cover.data.attributes.formats.small.url}`}
             alt=""
-            style={{
-              width: `${width}vw`,
-            }}
           />
         </a>
         <div className={styles.meta}>
