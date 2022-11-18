@@ -5,7 +5,7 @@ import styles from "./calendar.module.scss";
 const ARR_OFFSET = 7;
 const DAY = 1000 * 60 * 60 * 24;
 
-const DATE_WIDTH = 2.5;
+const DATE_WIDTH = 3;
 const DATE_MARGIN = 1.8;
 const DATE_NUMBER = 15;
 
@@ -18,13 +18,11 @@ const SLIDER_WIDTH =
   DATE_LOAD_LENGTH * DATE_WIDTH + (DATE_LOAD_LENGTH - 1) * DATE_MARGIN;
 const DATE_LEFT_MARGIN = (100 - CALENDAR_WIDTH) / 2;
 
-const ITEM_WIDTH = 15;
-const ITEM_MARGIN = 2.5;
+const ITEM_WIDTH = 245;
+const ITEM_MARGIN = 30;
 const CARDS_N = 4;
-const ITEM_WINDOW_OFFSET = 0.7;
 
 const ITEM_WINDOW_WIDTH = CARDS_N * ITEM_WIDTH + (CARDS_N - 1) * ITEM_MARGIN;
-const ITEM_LEFT_MARGIN = (100 - 4 * ITEM_WIDTH - 3 * ITEM_MARGIN) / 2;
 
 function DateBtn({ date: { date, free }, isselected, setSelected }) {
   const week = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
@@ -35,8 +33,8 @@ function DateBtn({ date: { date, free }, isselected, setSelected }) {
           isselected
             ? styles.dateBtnContainerSelected
             : free
-              ? styles.dateBtnContainer
-              : styles.dateBtnContainerHover
+            ? styles.dateBtnContainer
+            : styles.dateBtnContainerHover
         }
         style={{
           "--date-width": `${DATE_WIDTH}vw`,
@@ -129,9 +127,10 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
             className={styles.dateSlider}
             style={{
               width: `${SLIDER_WIDTH}vw`,
-              left: `-${((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
+              left: `-${
+                ((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
                 (DATE_WIDTH + DATE_MARGIN)
-                }vw`,
+              }vw`,
             }}
           >
             {(() => {
@@ -158,30 +157,35 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           }}
         />
       </div>
-      <div
-        className={styles.cardsWindow}
-        style={{
-          width: `${ITEM_WINDOW_WIDTH + ITEM_WINDOW_OFFSET * 2}vw`,
-          "margin-left": `${ITEM_LEFT_MARGIN - 2 * ITEM_WINDOW_OFFSET}vw`,
-          "padding-left": `${2 * ITEM_WINDOW_OFFSET}vw`,
-        }}
-      >
+      <div className={styles.cardsWindowContainer}>
         <div
-          className={styles.cardsSlider}
+          className={styles.cardsWindow}
           style={{
-            width: `${items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
-              }vw`,
-            left: `-${items.filter(
-              (item) =>
-                new Date(item.attributes.date).getTime() < selected.getTime()
-            ).length *
-              (ITEM_WIDTH + ITEM_MARGIN)
-              }vw`,
+            width: `${ITEM_WINDOW_WIDTH}px`,
+            paddingLeft: `${(ITEM_MARGIN * 2) / 3}px`,
+            paddingRight: `${(ITEM_MARGIN * 2) / 3}px`,
           }}
         >
-          {items.map((item, i) => (
-            <Item key={i} item={item} width={ITEM_WIDTH} />
-          ))}
+          <div
+            className={styles.cardsSlider}
+            style={{
+              width: `${
+                items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
+              }px`,
+              left: `-${
+                items.filter(
+                  (item) =>
+                    new Date(item.attributes.date).getTime() <
+                    selected.getTime()
+                ).length *
+                (ITEM_WIDTH + ITEM_MARGIN)
+              }px`,
+            }}
+          >
+            {items.map((item, i) => (
+              <Item key={i} item={item} width={ITEM_WIDTH} />
+            ))}
+          </div>
         </div>
       </div>
     </>
