@@ -67,6 +67,11 @@ export default function Item({ item, width }) {
             >
               {place.name}
             </div>
+            <div className={styles.buy}>
+              <a className={styles.link} href={item.attributes.tickets_link}>
+                БИЛЕТЫ
+              </a>
+            </div>
           </div>
         </div>
       </div>

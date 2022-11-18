@@ -88,6 +88,9 @@
   .bottom {
     height: 30%;
 
+    display: flex;
+    flex-direction: row;
+
     .place {
       color: var(--text-color);
       height: 100%;
@@ -108,7 +111,33 @@
 
     .buy {
       height: 100%;
-      width: 50%;
+      width: 40%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .link {
+        background-color: #6f1616;
+        border: 0;
+        padding: 5px;
+
+        width: 100%;
+        height: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        color: #bbbbbb;
+        font-family: "Montserrat";
+        font-size: 18px;
+        font-weight: bold;
+      }
     }
   }
 }
