@@ -33,8 +33,8 @@ function DateBtn({ date: { date, free }, isselected, setSelected }) {
           isselected
             ? styles.dateBtnContainerSelected
             : free
-            ? styles.dateBtnContainer
-            : styles.dateBtnContainerHover
+              ? styles.dateBtnContainer
+              : styles.dateBtnContainerHover
         }
         style={{
           "--date-width": `${DATE_WIDTH}vw`,
@@ -101,8 +101,8 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
 
   return (
     <>
-      <img className={styles.curLeft} src="/img/curtainsLeft.png" alt="" />
-      <img className={styles.curRight} src="/img/curtainsRight.png" alt="" />
+      {/* <img className={styles.curLeft} src="/img/curtainsLeft.png" alt="" /> */}
+      {/* <img className={styles.curRight} src="/img/curtainsRight.png" alt="" /> */}
       <div className={styles.datesStrip}>
         <img
           src="/img/larr.png"
@@ -127,10 +127,9 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
             className={styles.dateSlider}
             style={{
               width: `${SLIDER_WIDTH}vw`,
-              left: `-${
-                ((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
+              left: `-${((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
                 (DATE_WIDTH + DATE_MARGIN)
-              }vw`,
+                }vw`,
             }}
           >
             {(() => {
@@ -169,17 +168,15 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           <div
             className={styles.cardsSlider}
             style={{
-              width: `${
-                items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
-              }px`,
-              left: `-${
-                items.filter(
-                  (item) =>
-                    new Date(item.attributes.date).getTime() <
-                    selected.getTime()
-                ).length *
+              width: `${items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
+                }px`,
+              left: `-${items.filter(
+                (item) =>
+                  new Date(item.attributes.date).getTime() <
+                  selected.getTime()
+              ).length *
                 (ITEM_WIDTH + ITEM_MARGIN)
-              }px`,
+                }px`,
             }}
           >
             {items.map((item, i) => (
