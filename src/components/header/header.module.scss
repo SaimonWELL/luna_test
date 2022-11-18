@@ -9,8 +9,9 @@
   background-color: black;
 
   background-image: url("./gerasimov.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 53% center;
 }
 
 .phone_blind {
@@ -32,6 +33,7 @@
 
     color: #ececec;
   }
+
   .blind {
     font-family: "Montserrat";
     font-style: normal;

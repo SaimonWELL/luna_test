@@ -50,7 +50,7 @@ nav {
   z-index: 5;
 
   width: 100vw;
-  height: 90px;
+  height: 88px;
 
   border-top: 3px solid #262645;
   background-color: #222032;
@@ -89,29 +89,21 @@ nav {
   .logoContainer {
     width: 420px;
 
-    .back_logo {
-      position: absolute;
-      z-index: 2;
-
-      margin-top: -160px;
-      right: -40px;
-
-      pointer-events: none;
-    }
-
     .back_elipse {
       position: absolute;
-      z-index: 1;
-
-      margin-top: -150px;
+      z-index: 2;
+      height: 241px;
+      width: 241px;
+      background-color: #13132D;
+      border-radius: 50%;
+      margin-top: -12%;
       right: 70px;
     }
 
     .moon_logo {
       position: absolute;
       z-index: 3;
-
-      margin-top: -145px;
+      margin-top: -12%;
       right: 70px;
     }
 
@@ -140,9 +132,9 @@ nav {
 
     .text_logo {
       position: absolute;
-      z-index: 4;
+      z-index: 3;
 
-      margin-top: -125px;
+      margin-top: -158px;
       right: 180px;
     }
   }
