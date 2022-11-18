@@ -2,14 +2,17 @@
   margin: 0;
   padding: 0;
 }
+
 main {
-  background: #111129;
+  background: #15141E;
   height: 100%;
 }
+
 footer {
-  background-color: #262645;
+  background-color: #101017;
   height: 100%;
 }
+
 hr {
   height: 3px;
   max-width: 100%;

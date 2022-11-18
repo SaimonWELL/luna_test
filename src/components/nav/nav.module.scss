@@ -2,6 +2,7 @@
   margin-left: 181px;
   display: flex;
   flex-direction: row;
+
   p {
     font-family: "Montserrat";
     font-style: normal;
@@ -13,6 +14,7 @@
     margin-left: 16px;
   }
 }
+
 .phone_blind {
   margin-right: 181px;
 
@@ -29,6 +31,7 @@
 
     color: #ececec;
   }
+
   .blind {
     font-family: "Montserrat";
     font-style: normal;
@@ -40,6 +43,7 @@
     color: #ececec;
   }
 }
+
 nav {
   position: sticky;
   top: 0;
@@ -49,7 +53,7 @@ nav {
   height: 90px;
 
   border-top: 3px solid #262645;
-  background-color: #111129;
+  background-color: #222032;
 
   box-shadow: 0px 3px 0px #000000;
 
@@ -116,6 +120,7 @@ nav {
     }
 
     @keyframes swing {
+
       0%,
       100% {
         transform: rotate(0deg);
