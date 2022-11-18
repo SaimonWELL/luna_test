@@ -29,6 +29,7 @@ export default function Item({ item, width }) {
         className={styles.mainBlock}
         style={{
           width: `${width}vw`,
+          "--item-width": `${width}vw`,
           "--place-color": place.color,
           "--place-text-color": place.text_color,
         }}
@@ -46,24 +47,11 @@ export default function Item({ item, width }) {
             }}
           />
         </a>
-        <h2 className={styles.title}>
-          {item.attributes.play.data.attributes.title}
-        </h2>
-        <div className={styles.datePlace}>
-          <div className={styles.date}>
-            <span className={styles.number}>
-              /{date.getDate()}.{date.getMonth()}
-            </span>
-            <span className={styles.place}>{place.name}</span>
-          </div>
-          <div className={styles.time}>
-            <span>{item.attributes.time.slice(0, 5)}</span>
-            <hr />
-          </div>
+        <div className={styles.meta}>
+          <img src="/img/item_curtain.png" alt="" className={styles.curtain} />
+          <div className={styles.mid}></div>
+          <div className={styles.bottom}></div>
         </div>
-        <a href={item.attributes.tickets_link} className={styles.buy}>
-          <p>Билеты</p>
-        </a>
       </div>
     </>
   );

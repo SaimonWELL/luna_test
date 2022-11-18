@@ -5,7 +5,7 @@ import styles from "./calendar.module.scss";
 const ARR_OFFSET = 7;
 const DAY = 1000 * 60 * 60 * 24;
 
-const DATE_WIDTH = 2.5;
+const DATE_WIDTH = 3;
 const DATE_MARGIN = 1.8;
 const DATE_NUMBER = 15;
 
@@ -18,7 +18,7 @@ const SLIDER_WIDTH =
   DATE_LOAD_LENGTH * DATE_WIDTH + (DATE_LOAD_LENGTH - 1) * DATE_MARGIN;
 const DATE_LEFT_MARGIN = (100 - CALENDAR_WIDTH) / 2;
 
-const ITEM_WIDTH = 15;
+const ITEM_WIDTH = 17;
 const ITEM_MARGIN = 2.5;
 const CARDS_N = 4;
 const ITEM_WINDOW_OFFSET = 0.7;
@@ -35,8 +35,8 @@ function DateBtn({ date: { date, free }, isselected, setSelected }) {
           isselected
             ? styles.dateBtnContainerSelected
             : free
-              ? styles.dateBtnContainer
-              : styles.dateBtnContainerHover
+            ? styles.dateBtnContainer
+            : styles.dateBtnContainerHover
         }
         style={{
           "--date-width": `${DATE_WIDTH}vw`,
@@ -129,9 +129,10 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
             className={styles.dateSlider}
             style={{
               width: `${SLIDER_WIDTH}vw`,
-              left: `-${((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
+              left: `-${
+                ((firstDate.getTime() - dates[0].date.getTime()) / DAY) *
                 (DATE_WIDTH + DATE_MARGIN)
-                }vw`,
+              }vw`,
             }}
           >
             {(() => {
@@ -169,14 +170,16 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
         <div
           className={styles.cardsSlider}
           style={{
-            width: `${items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
-              }vw`,
-            left: `-${items.filter(
-              (item) =>
-                new Date(item.attributes.date).getTime() < selected.getTime()
-            ).length *
+            width: `${
+              items.length * ITEM_WIDTH + (items.length - 1) * ITEM_MARGIN
+            }vw`,
+            left: `-${
+              items.filter(
+                (item) =>
+                  new Date(item.attributes.date).getTime() < selected.getTime()
+              ).length *
               (ITEM_WIDTH + ITEM_MARGIN)
-              }vw`,
+            }vw`,
           }}
         >
           {items.map((item, i) => (
