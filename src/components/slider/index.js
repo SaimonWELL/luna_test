@@ -100,11 +100,11 @@ export default function Slider({ items, firstDate }) {
               <div className={styles.startCalendarText}>
                 <h1>{MONTHS[firstDate.getMonth()]}</h1>
                 <div className={styles.buttons}>
-                  <a href="http://www.lunatheatre.ru/afisha">
+                  {/* <a href="http://www.lunatheatre.ru/afisha">
                     <div className={styles.post}>
                       <p>Афиша</p>
                     </div>
-                  </a>
+                  </a> */}
                   <a href="http://www.lunatheatre.ru/shows">
                     <div className={styles.allPost}>
                       <p>Все спектакли</p>
