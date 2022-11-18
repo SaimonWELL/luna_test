@@ -162,8 +162,8 @@ export default function Calendar({ firstDate, setFirstDate, items }) {
           className={styles.cardsWindow}
           style={{
             width: `${ITEM_WINDOW_WIDTH}px`,
-            paddingLeft: `${ITEM_MARGIN}px`,
-            paddingRight: `${ITEM_MARGIN}px`,
+            paddingLeft: `${(ITEM_MARGIN * 2) / 3}px`,
+            paddingRight: `${(ITEM_MARGIN * 2) / 3}px`,
           }}
         >
           <div
