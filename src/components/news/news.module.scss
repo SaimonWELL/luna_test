@@ -22,10 +22,11 @@
 
     text-transform: uppercase;
 
-    color: #cdaf0d;
+    color: #ffffff;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
+
   .btn {
     width: 152px;
     height: 35px;
@@ -45,6 +46,7 @@
     }
   }
 }
+
 .newsContent {
   max-width: 100%;
   flex-direction: row;
@@ -71,6 +73,7 @@
 
       display: flex;
       flex-direction: column;
+
       .item_title {
         font-family: "Source Sans Pro", sans-serif;
         font-style: normal;
@@ -80,6 +83,7 @@
 
         color: #fffdf2;
       }
+
       p {
         font-family: "Montserrat";
         font-style: normal;
@@ -89,6 +93,7 @@
 
         color: rgba(244, 244, 244, 0.5);
       }
+
       .newsDate {
         font-size: 17px;
       }

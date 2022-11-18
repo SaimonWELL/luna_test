@@ -29,34 +29,23 @@ function Nav() {
         </li>
       </ul>
       <div className={styles.logoContainer}>
-        <img
-          className={styles.back_logo}
-          src="/img/back-logo.png"
-          width="450px"
-          height="350px"
-          alt=""
-        />
-        <img
+        <div
           className={styles.back_elipse}
-          src="/img/back_elipse.png"
-          width="230px"
-          height="230px"
-          alt=""
         />
         <img
           className={styles.moon_logo}
           src="/img/moon_logo.png"
           alt=""
-          width="220px"
-          height="220px"
+          width="14.8%"
+          height="241px"
         />
         <img
           className={styles.text_logo}
           id={"href"}
           src="/img/text_logo.png"
           alt=""
-          width="250px"
-          height="150px"
+          width="260px"
+          height="175px"
         />
       </div>
     </nav>
