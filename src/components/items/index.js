@@ -23,6 +23,7 @@ const PLACES = {
 export default function Item({ item, width }) {
   const date = new Date(item.attributes.date);
   const place = PLACES[item.attributes.place];
+  console.log(item);
   return (
     <>
       <div
@@ -49,7 +50,17 @@ export default function Item({ item, width }) {
         </a>
         <div className={styles.meta}>
           <img src="/img/item_curtain.png" alt="" className={styles.curtain} />
-          <div className={styles.mid}></div>
+          <div className={styles.mid}>
+            <div className={styles.date}>
+              {date.getDate()}.{date.getMonth()}
+            </div>
+            <div className={styles.time}>
+              {item.attributes.time.slice(0, 5)}
+            </div>
+            <div className={styles.title}>
+              {item.attributes.play.data.attributes.title}
+            </div>
+          </div>
           <div className={styles.bottom}></div>
         </div>
       </div>
