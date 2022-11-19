@@ -13,10 +13,18 @@ footer {
   height: 100%;
 }
 
+.divider {
+  background: url("../public/img/divider.png");
+  height: 10px;
+  max-width: 100%;
+
+  border: none;
+}
+
 hr {
   height: 3px;
   max-width: 100%;
 
   border: none;
-  background-color: #515169;
+  background-color: #2a2a38;
 }

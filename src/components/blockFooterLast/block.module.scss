@@ -1,13 +1,14 @@
-.wrapper{
+.wrapper {
   margin-top: 42px;
   margin-left: 165px;
   padding-bottom: 30px;
-  .group1{
+
+  .group1 {
     display: flex;
     flex-direction: row;
 
-    .text1{
-      p{
+    .text1 {
+      p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -19,13 +20,14 @@
         color: #FFFFFF;
       }
     }
-    .text2{
+
+    .text2 {
       display: flex;
       flex-direction: column;
       color: #FFFFFF;
       margin-left: 114px;
 
-      h3{
+      h3 {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -36,7 +38,8 @@
         text-transform: lowercase;
 
       }
-      p{
+
+      p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -49,14 +52,17 @@
         color: #FFFFFF;
 
       }
-      a{
+
+      a {
         color: #FFFFFF;
         margin-bottom: 5px;
       }
     }
-    .text3{
+
+    .text3 {
       margin-left: 103px;
-      p{
+
+      p {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
@@ -68,7 +74,8 @@
 
         color: #FFFFFF;
       }
-      h3{
+
+      h3 {
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
@@ -81,10 +88,12 @@
       }
     }
   }
-  .group2{
+
+  .group2 {
     display: flex;
     flex-direction: row;
-    p{
+
+    p {
       margin-top: 22px;
       padding-bottom: 40px;
 
@@ -98,7 +107,8 @@
 
       color: #FFFFFF;
     }
-    a{
+
+    a {
       margin-left: 186px;
       font-family: 'Montserrat';
       font-style: normal;
