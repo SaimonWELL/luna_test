@@ -2,17 +2,9 @@ import React from "react";
 
 import styles from "./block.module.scss";
 
-const SPONSORS = [
-  "http://персональныеданные.дети/",
-  "https://organizations.kultura.mos.ru/organizations/gbuk_gmoskvy_moskovskii_teatr_teatr_luny.html",
-  "https://bus.gov.ru/pub/info-card/137565?activeTab=3",
-  "http://ag.mos.ru/",
-  "http://hrculturemos.ru/bank/",
-  "https://historydepositarium.ru/",
-  "http://www.lunatheatre.ru/",
-  "https://grants.culture.ru/helpful_information/",
-  "http://www.lunatheatre.ru/pages/otkrytaya-informaciya",
-];
+const social = ["tg_logo", "vk_logo", "rutube_logo"]
+const links = ["https://t.me/lunatheatre", "https://vk.com/teatr_luny", "https://rutube.ru/channel/26047198/"]
+
 
 export default function Block() {
   return (
@@ -30,11 +22,14 @@ export default function Block() {
           </div>
         </div>
         <div className={styles.group2}>
-          {SPONSORS.map((link, i) => (
-            <a key={i} href={link}>
-              <img src={`/img/sponsor/${i + 1}.png`} alt="" />
-            </a>
-          ))}
+          <div className={styles.item1}>
+            <h1>Мы в соцсетях</h1>
+            {social.map((filename, i) => (
+              <a key={i} href={links[i]}>
+                <img src={`/img/${filename}.png`} alt={filename} />
+              </a>
+            ))}
+          </div>
         </div>
         <div className={styles.group3}>
           <img src="/img/footer_logo.png" alt="" />
