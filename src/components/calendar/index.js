@@ -40,7 +40,7 @@ function DateBtn({ date: { date, free }, isselected, setSelected }) {
           "--date-width": `${DATE_WIDTH}vw`,
         }}
       >
-        <img src="/img/calendar_luna.svg" alt="" />
+        <img src="/img/calendar_luna.png" alt="" />
         <div
           // className={
           //   isselected
