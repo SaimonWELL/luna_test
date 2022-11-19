@@ -1,9 +1,12 @@
-.swiper{
-    height: 800px;
-    max-width: 100%;
+.swiper {
+  height: 800px;
+  max-width: 100%;
 }
-.wrapper{
-    display: flex;
-    flex-direction: row;
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
 
+.swiper-slide {
+  -webkit-transform: translate3d(0, 0, 0);
 }

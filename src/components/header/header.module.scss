@@ -1,109 +1,47 @@
-.header_top{
+.header_top {
   width: 100%;
-  height: 85px;
+  height: 200px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
+  background-color: black;
 
-  background-color: #0E0E23;
+  background-image: url("./gerasimov.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 53% center;
 }
-.cult_moscov{
 
-  margin-left: 181px;
-  display: flex;
-  flex-direction: row;
-  p{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-
-    margin-left: 16px;
-  }
-}
-.phone_blind{
-  margin-right: 181px;
+.phone_blind {
+  margin-left: 50px;
+  margin-top: 20px;
 
   display: flex;
   flex-direction: column;
 
-
-  .phone{
-    font-family: 'Mohave';
+  .phone {
+    font-family: "Mohave";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 35px;
     text-decoration: none;
 
-    color: #ECECEC;
+    margin-bottom: 40px;
+
+    color: #ececec;
   }
-  .blind{
-    font-family: 'Montserrat';
+
+  .blind {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
 
-    color: #ECECEC;
+    color: #ececec;
   }
-}
-nav{
-  width: 100%;
-  height: 65px;
-
-  background-color: #262645;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  ul{
-    display: flex;
-    list-style: none;
-    a{
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: lowercase;
-
-      color: #F4F4F4;
-    }
-  }
-  .rightMenu{
-    margin-right: 180px;
-    align-items: center;
-
-    .menuItemR{
-      margin-left: 22px;
-    }
-  }
-  .leftMenu{
-    margin-left: 180px;
-    align-items: center;
-
-    .menuItemL{
-      margin-right: 22px;
-    }
-  }
-  .logo{
-    position: relative;
-    width: 252.63px;
-    height: 254px;
-    bottom: 80px;
-    background: url("//img/back-logo.png") no-repeat;
-
-    .test{
-    position: relative;
-    right: 60px;
-    }
-
-  }
-
 }

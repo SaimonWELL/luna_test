@@ -1,204 +1,149 @@
-.cult_moscov{
-
+.cult_moscov {
   margin-left: 181px;
   display: flex;
   flex-direction: row;
-  p{
-    font-family: 'Montserrat';
+
+  p {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #FFFFFF;
+    color: #ffffff;
 
     margin-left: 16px;
   }
 }
-.phone_blind{
+
+.phone_blind {
   margin-right: 181px;
 
   display: flex;
   flex-direction: column;
 
-
-  .phone{
-    font-family: 'Mohave';
+  .phone {
+    font-family: "Mohave";
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
     line-height: 35px;
     text-decoration: none;
 
-    color: #ECECEC;
+    color: #ececec;
   }
-  .blind{
-    font-family: 'Montserrat';
+
+  .blind {
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
 
-    color: #ECECEC;
+    color: #ececec;
   }
 }
-nav{
-  width: 100%;
-  height: 65px;
 
-  background-color: #262645;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  width: 100vw;
+  height: 88px;
+
+  // border-top: 3px solid #201e2d;
+  background-color: #181723;
+
+  box-shadow: 0px 1px 0px #000000;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  ul{
-    display: flex;
-    list-style: none;
-    a{
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
-      text-transform: lowercase;
 
-      color: #F4F4F4;
-    }
-  }
-  .rightMenu{
-    margin-right: 180px;
-    align-items: center;
-
-    .menuItemR{
-      margin-left: 22px;
-    }
-  }
-  .leftMenu{
-    margin-left: 180px;
-    align-items: center;
-
-    .menuItemL{
-      margin-right: 22px;
-    }
-  }
-  .logo{
-    position: relative;
-    width: 252.63px;
-    height: 254px;
-    bottom: 80px;
-    background: url("/../public/img/back-logo.png")  no-repeat -5px -2px,url("/../public/img/back_elipse.png") no-repeat 60px 10px;
-
-
-    .test{
-      width: 47%;
-      height: 47%;
-      position: relative;
-      top:11px;
-      left: 65px;
-
-
-    }
-
-    .test:hover{
-      animation: swing 1s infinite ease-in-out;
-    }
-    @keyframes swing {
-      0%, 100% { transform: rotate(-30deg); }
-
-      50% { transform: rotate(30deg); }
-
-    }
-    .text_logo{
-      position: relative;
-      bottom: 5%;
-      right: 130px;
-      width: 128px;
-      height: 90px;
-
-    }
-
+  .small {
+    background-color: #272538;
   }
 
-}
-
-@media (max-width: 1400px){
-  nav{
-    width: 100%;
-    height: 65px;
-
-    background-color: #262645;
+  ul {
+    flex: 1;
 
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    ul{
-      display: flex;
-      list-style: none;
-      a{
-        font-family: 'Montserrat';
+    list-style: none;
+
+    align-items: center;
+
+    padding-left: 12vw;
+    padding-right: 5vw;
+
+    li {
+      a {
+        font-family: "Montserrat";
         font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
+        font-weight: 550;
+        font-size: 16px;
         line-height: 24px;
         text-transform: lowercase;
 
-        color: #F4F4F4;
+        color: #f4f4f4;
+      }
+
+      a:hover {
+        color: #778194;
       }
     }
-    .rightMenu{
-      margin-right: 180px;
-      align-items: center;
+  }
 
-      .menuItemR{
-        margin-left: 22px;
-      }
-    }
-    .leftMenu{
-      margin-left: 180px;
-      align-items: center;
+  .logoContainer {
+    width: 420px;
 
-      .menuItemL{
-        margin-right: 22px;
-      }
-    }
-    .logo{
-      position: relative;
-      width: 252.63px;
-      height: 254px;
-      bottom: 80px;
-      background: url("/../public/img/back-logo.png")  no-repeat -5px -2px,url("/../public/img/back_elipse.png") no-repeat 60px 10px;
-
-
-      .test{
-        width: 40%;
-        height: 40%;
-        position: relative;
-        top:11px;
-        left: 65px;
-
-
-      }
-
-      .test:hover{
-        animation: swing 1s infinite ease-in-out;
-      }
-      @keyframes swing {
-        0%, 100% { transform: rotate(-30deg); }
-
-        50% { transform: rotate(30deg); }
-
-      }
-      .text_logo{
-        position: relative;
-        bottom: 5%;
-        right: 35%;
-        width: 110px;
-        height: 70px;
-
-
-      }
-
+    .back_elipse {
+      position: absolute;
+      z-index: 2;
+      height: 241px;
+      width: 241px;
+      background-color: #13132D;
+      border-radius: 50%;
+      margin-top: -178px;
+      right: 70px;
     }
 
+    .moon_logo {
+      position: absolute;
+      z-index: 3;
+      margin-top: -178px;
+      right: 70px;
+    }
+
+    .moon_logo:hover {
+      animation: swing 2s 1 ease-out;
+    }
+
+    @keyframes swing {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      10%,
+      50%,
+      90% {
+        transform: rotate(20deg);
+      }
+
+      30%,
+      70% {
+        transform: rotate(-20deg);
+      }
+    }
+
+    .text_logo {
+      position: absolute;
+      z-index: 3;
+
+      margin-top: -158px;
+      right: 180px;
+    }
   }
 }

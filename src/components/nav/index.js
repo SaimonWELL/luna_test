@@ -2,32 +2,53 @@ import React from "react";
 
 import styles from "./nav.module.scss";
 
-
-
-
-function Nav(){
-
-    return(
-        <div className={styles.header_menu}>
-            <nav className={styles.menu}>
-                <ul className={styles.leftMenu}>
-                    <li className={styles.menuItemL}><a href="#">Афиша</a></li>
-                    <li className={styles.menuItemL}><a href="#">Спектакли</a></li>
-                    <li className={styles.menuItemL}><a href="#">труппа</a></li>
-                    <li className={styles.menuItemL}><a href="#">театр</a></li>
-                </ul>
-                <div className={styles.logo}><a href="#" >
-                    <img className={styles.test} src="./img/moon_logo.png" alt="moon"  />
-                    <img className={styles.text_logo} id={'href'} src="./img/text_logo.png" alt="" width={'128px'} height={'90px'} />
-
-                </a></div>
-                <ul className={styles.rightMenu}>
-                    <li className={styles.menuItemR}><a href="#">Новости</a></li>
-                    <li className={styles.menuItemR}><a href="#">Пресса</a></li>
-                    <li className={styles.menuItemR}><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
-        </div>
-    )
+function Nav() {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <a href="http://www.lunatheatre.ru/afisha">Афиша</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/shows">Спектакли</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/actors">труппа</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/pages/o-lune">театр</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/news">Новости</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/smi">Пресса</a>
+        </li>
+        <li>
+          <a href="http://www.lunatheatre.ru/pages/kontakty">Контакты</a>
+        </li>
+      </ul>
+      <div className={styles.logoContainer}>
+        <div
+          className={styles.back_elipse}
+        />
+        <img
+          className={styles.moon_logo}
+          src="/img/moon_logo.png"
+          alt=""
+          width="227px"
+          height="241px"
+        />
+        <img
+          className={styles.text_logo}
+          id={"href"}
+          src="/img/text_logo.png"
+          alt=""
+          width="260px"
+          height="175px"
+        />
+      </div>
+    </nav>
+  );
 }
 export default Nav;

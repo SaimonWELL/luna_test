@@ -1,0 +1,213 @@
+$strip-height: 33px;
+
+$date-width: var(--date-width);
+// $date-margin: 0.9vw;
+
+$ndate-width: 3.2vw;
+$ndate-height: 60px;
+
+$moon-size: 60px;
+
+$reg-font-size: 25px;
+$sel-font-size: 37px;
+$wk-font-size: 23px;
+
+.datesStrip {
+  width: 100%;
+  height: $strip-height;
+  background: #631818;
+
+  display: flex;
+  flex-direction: row;
+
+  // align-items: center;
+  // place-content: center;
+
+  margin-bottom: 80px;
+}
+
+.dateWindow {
+  padding-top: 20px;
+  margin-top: -20px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.dateSlider {
+  display: flex;
+  flex-direction: row;
+  place-content: space-between;
+  position: relative;
+
+  transition: left 0.2s ease;
+}
+
+.dateBtnContainer,
+.dateBtnContainerSelected,
+.dateBtnContainerHover {
+  height: $strip-height;
+  width: $date-width;
+  // margin-left: $date-margin;
+  // margin-right: $date-margin;
+
+  // transition: left 1s;
+  transition: opacity 0.5s ease-in-out, left 0.5s ease-in-out;
+  z-index: 1;
+
+  img {
+    position: absolute;
+    z-index: 2;
+    scale: 0;
+
+    height: $moon-size;
+    width: $moon-size;
+    margin-top: calc(0px - ($moon-size - $strip-height) / 2);
+    margin-left: calc(2px - ($moon-size - $date-width) / 2);
+
+    transition: scale 0.1s ease-in-out;
+  }
+}
+
+.dateBtnContainerHover:hover>img,
+.dateBtnContainerSelected>img {
+  scale: 1;
+}
+
+.dateBtnContainerHover:hover>img,
+.dateBtnContainerSelected:hover>img {
+  filter: drop-shadow(0px 0px 5px #d5d5d5);
+}
+
+// .dateContainer : .dateBtnContainer > .dateContainer
+// .dateContainerSelected : .dateBtnContainerSelected > .dateContainer
+// .dateContainerHover : .dateBtnContainerHover > .dateContainer
+
+.dateContainer {
+  // pointer-events: none;
+  position: absolute;
+  z-index: 1;
+
+  width: $date-width;
+  height: $strip-height;
+
+  transition: width 0.1s, height 0.1s, margin-top 0.1s, margin-left 0.1s,
+    box-shadow 0.1s;
+}
+
+.dateBtnContainerHover:hover>.dateContainer,
+.dateBtnContainerSelected>.dateContainer {
+  position: absolute;
+  z-index: 2;
+
+  width: $ndate-width;
+  height: $ndate-height;
+  margin-top: calc(0px - ($ndate-height - $strip-height) / 2);
+  margin-left: calc(0px - ($ndate-width - $date-width) / 2);
+}
+
+.dateNum {
+  width: $date-width;
+  height: $strip-height;
+  font-size: $reg-font-size;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-left: -0.1vw;
+
+  transition: font-size 0.1s, width 0.1s, height 0.1s, font-weight 0.1s;
+}
+
+.dateBtnContainer>.dateContainer>.dateNum {
+  color: #926363;
+}
+
+.dateBtnContainerHover>.dateContainer>.dateNum,
+.dateBtnContainerSelected>.dateContainer>.dateNum {
+  color: #eeeeee;
+}
+
+.dateBtnContainer>.dateContainer,
+.dateBtnContainerSelected>.dateContainer {
+  cursor: var(--cursor);
+}
+
+.dateBtnContainerHover:hover>.dateContainer>.dateNum,
+.dateBtnContainerSelected>.dateContainer>.dateNum {
+  font-weight: 450;
+  font-size: $sel-font-size;
+  width: $ndate-width;
+  height: $ndate-height;
+}
+
+.weekDay {
+  margin-top: 5px;
+
+  font-family: "Montserrat";
+  font-size: $wk-font-size;
+  color: white;
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.cardsWindowContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardsWindow {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
+}
+
+.cardsSlider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  place-content: space-between;
+
+  transition: left 0.5s ease;
+  position: relative;
+}
+
+.curLeft,
+.curRight {
+  position: absolute;
+  z-index: 2;
+  top: 1093px;
+}
+
+.curLeft {
+  left: 0;
+}
+
+.curRight {
+  right: 0;
+}
+
+.rarr,
+.larr {
+  position: absolute;
+  margin-top: calc(1.3 * $strip-height);
+  height: 23px;
+  cursor: pointer;
+}
+
+$arr-margin: 15px;
+
+.rarr {
+  margin-left: $arr-margin;
+}
+
+.larr {
+  margin-right: $arr-margin;
+}

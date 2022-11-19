@@ -1,79 +1,79 @@
-
-
-
-.block1{
-
+.block1 {
   padding-top: 60px;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   position: relative;
   margin-bottom: 40px;
 
-  .group1{
+  .group1 {
     margin-left: 165px;
     height: 184px;
-
-    .item1 {
-      a, h1 {
-        font-family: 'Mohave', sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 36px;
-
-
-        color: #FFFFFF;
-      }
-    }
-    .item2{
-
-      p{
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        margin-top: 45px;
-
-
-        color: white;
-      }
-    }
-
-
   }
-  .group2{
+
+  .item1 {
+
+    a {
+      font-family: "Montserrat", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 25px;
+
+      color: #ffffff;
+    }
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-style: medium;
+      font-weight: 500;
+      font-size: 36px;
+
+      color: #ffffff;
+    }
+  }
+
+  .item2 {
+    p {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      margin-top: 45px;
+
+      color: white;
+    }
+  }
+
+  .group2 {
     width: 400px;
-    height: 200px;
+    height: 184px;
 
     margin-left: 122px;
 
-
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: top;
     flex-wrap: wrap;
-    a{height: 40px}
-    img{
-      margin-right: 10px;
-      margin-bottom: 25px;
-    }
-    a:last-child img{vertical-align: bottom}
 
+    img {
+      margin-right: 10px;
+      margin-top: 10px;
+      height: 35px;
+    }
   }
-  .group3{
+
+  .group3 {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     height: 400px;
     position: absolute;
-    top:90%;
-    left: 95%;
+    top: 70%;
+    left: 89%;
 
-    img{
-    position: absolute;
+    img {
+      position: absolute;
 
-      bottom: 40px;
-
-
+      bottom: 80px;
     }
   }
 }
