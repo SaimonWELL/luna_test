@@ -8,7 +8,7 @@ $ndate-height: 60px;
 
 $moon-size: 60px;
 
-$reg-font-size: 30px;
+$reg-font-size: 25px;
 $sel-font-size: 37px;
 $wk-font-size: 23px;
 
@@ -68,13 +68,13 @@ $wk-font-size: 23px;
   }
 }
 
-.dateBtnContainerHover:hover > img,
-.dateBtnContainerSelected > img {
+.dateBtnContainerHover:hover>img,
+.dateBtnContainerSelected>img {
   scale: 1;
 }
 
-.dateBtnContainerHover:hover > img,
-.dateBtnContainerSelected:hover > img {
+.dateBtnContainerHover:hover>img,
+.dateBtnContainerSelected:hover>img {
   filter: drop-shadow(0px 0px 5px #d5d5d5);
 }
 
@@ -94,8 +94,8 @@ $wk-font-size: 23px;
     box-shadow 0.1s;
 }
 
-.dateBtnContainerHover:hover > .dateContainer,
-.dateBtnContainerSelected > .dateContainer {
+.dateBtnContainerHover:hover>.dateContainer,
+.dateBtnContainerSelected>.dateContainer {
   position: absolute;
   z-index: 2;
 
@@ -120,22 +120,22 @@ $wk-font-size: 23px;
   transition: font-size 0.1s, width 0.1s, height 0.1s, font-weight 0.1s;
 }
 
-.dateBtnContainer > .dateContainer > .dateNum {
-  color: #975b5b;
+.dateBtnContainer>.dateContainer>.dateNum {
+  color: #926363;
 }
 
-.dateBtnContainerHover > .dateContainer > .dateNum,
-.dateBtnContainerSelected > .dateContainer > .dateNum {
+.dateBtnContainerHover>.dateContainer>.dateNum,
+.dateBtnContainerSelected>.dateContainer>.dateNum {
   color: #eeeeee;
 }
 
-.dateBtnContainer > .dateContainer,
-.dateBtnContainerSelected > .dateContainer {
+.dateBtnContainer>.dateContainer,
+.dateBtnContainerSelected>.dateContainer {
   cursor: var(--cursor);
 }
 
-.dateBtnContainerHover:hover > .dateContainer > .dateNum,
-.dateBtnContainerSelected > .dateContainer > .dateNum {
+.dateBtnContainerHover:hover>.dateContainer>.dateNum,
+.dateBtnContainerSelected>.dateContainer>.dateNum {
   font-weight: 450;
   font-size: $sel-font-size;
   width: $ndate-width;
@@ -211,4 +211,3 @@ $arr-margin: 15px;
 .larr {
   margin-right: $arr-margin;
 }
-

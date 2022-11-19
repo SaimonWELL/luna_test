@@ -36,7 +36,7 @@ function Nav() {
           className={styles.moon_logo}
           src="/img/moon_logo.png"
           alt=""
-          width="14.8%"
+          width="227px"
           height="241px"
         />
         <img

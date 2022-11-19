@@ -7,7 +7,7 @@ import Nav from "./components/nav";
 import Slider from "./components/slider";
 import Calendar from "./components/calendar";
 import News from "./components/news";
-import Form from "./components/form";
+import Partners from "./components/partners";
 import Block from "./components/blockFooter";
 import LastBlock from "./components/blockFooterLast";
 
@@ -69,8 +69,8 @@ function App() {
         </section>
         <section>
           <News itemsNews={itemsNews} setItemsNews={setItemsNews} />
-          <Form />
         </section>
+        <Partners />
       </main>
       <footer>
         <Block />
